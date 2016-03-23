@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "awesome-typescript-loader": "^0.17.0-rc.2",
+    "raw-loader": "^0.5.1",
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.9",
     "webpack": "^1.12.14",

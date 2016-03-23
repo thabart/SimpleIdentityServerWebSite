@@ -9,6 +9,10 @@ module.exports = {
           {
               test: /\.ts$/,
               loader: 'ts'
+          },
+          {
+              test: /\.html$/,
+              loader: 'raw'
           }
       ]
   }
