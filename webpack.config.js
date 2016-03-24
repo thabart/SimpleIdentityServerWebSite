@@ -11,6 +11,11 @@ var path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var root = function(args) {
+  args = Array.prototype.slice.call(arguments, 0);
+  return path.join.apply(path, [__dirname].concat(args));
+}
+
 module.exports = {
   metadata: metadata,
   entry: {
@@ -28,6 +33,13 @@ module.exports = {
           {
               test: /\.ts$/,
               loader: 'awesome-typescript'
+          },
+          {
+              test: /\.html$/,
+              loader: 'raw',
+              exclude: [
+                  root('src/index.html')
+              ]
           }
       ]
   },
