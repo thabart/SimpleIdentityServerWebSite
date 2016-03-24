@@ -13,9 +13,5 @@
   <app>
     Loading...
   </app>
-  <% if (webpackConfig.metadata.ENV === 'development') { %>
-  <!-- Webpack Dev Server reload -->
-  <script src="http://<%= webpackConfig.metadata.host %>:<%= webpackConfig.metadata.port %>/webpack-dev-server.js"></script>
-  <% } %>
 </body>
 </html>
