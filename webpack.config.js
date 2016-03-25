@@ -25,9 +25,7 @@ module.exports = {
   },
   output: {
       path: 'builds',
-      filename: '[name].js',
-      sourceMapFileName: '[name].js.map',
-      chunkFileName: '[id].chunk.js'
+      filename: '[name].js'
   },
   module: {
       loaders: [
@@ -41,7 +39,15 @@ module.exports = {
               exclude: [
                   root('src/index.html')
               ]
-          }, 
+          },
+          {
+              test: /\.scss$/,
+              loaders: [ 'raw', 'sass' ]
+          },
+          {
+              test: /\.css$/,
+              loader:'raw'
+          },
           {
               test: /bootstrap\/dist\/js\/umd\//,
               loader: 'imports?JQuery=jquery'
@@ -57,6 +63,9 @@ module.exports = {
             jQuery: 'jquery',
             $: 'jquery',
             jquery: 'jquery'
+      }),
+      new ProvidePlugin({
+          "window.Tether": "tether"
       })
   ],
   devServer: {
