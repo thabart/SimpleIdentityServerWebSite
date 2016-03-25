@@ -8,8 +8,9 @@ const metadata = {
 
 var path = require('path'),
     srcPath = path.join(__dirname, 'src'),
-    webpack = require('webpack'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+    webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin'),
+    ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
 var root = function(args) {
   args = Array.prototype.slice.call(arguments, 0);
@@ -40,6 +41,10 @@ module.exports = {
               exclude: [
                   root('src/index.html')
               ]
+          }, 
+          {
+              test: /bootstrap\/dist\/js\/umd\//,
+              loader: 'imports?JQuery=jquery'
           }
       ]
   },
@@ -47,6 +52,11 @@ module.exports = {
       new HtmlWebpackPlugin({
           template: 'src/index.html',
           chunksSortMode: 'none'
+      }),
+      new ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
       })
   ],
   devServer: {
