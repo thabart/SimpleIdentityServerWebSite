@@ -1,7 +1,7 @@
 // Bootstrap
-// import 'jquery';
-// import 'tether';
-// import 'bootstrap-loader';
+import 'jquery';
+import 'tether';
+import 'bootstrap-loader';
 
 // Angular 2
 import 'angular2/platform/browser';

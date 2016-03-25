@@ -50,7 +50,7 @@ module.exports = {
           },
           {
               test: /bootstrap\/dist\/js\/umd\//,
-              loader: 'imports?JQuery=jquery'
+              loader: 'imports?jQuery=jquery'
           }
       ]
   },
