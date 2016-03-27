@@ -10,7 +10,9 @@
     "moduleResolution": "node"
   },
   "exclude": [
-    "typings/tsd.d.ts",
+    "typings/browser/ambient/node/index.d.ts",
+    "typings/browser.d.ts",
+    "typings/main.d.ts",
     "node_modules"
   ],  
   "compileOnSave": false,
