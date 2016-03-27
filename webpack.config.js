@@ -8,14 +8,10 @@ const metadata = {
 
 var path = require('path'),
     srcPath = path.join(__dirname, 'src'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    helpers = require('./helpers');
 var HtmlWebpackPlugin = require('html-webpack-plugin'),
     ProvidePlugin = require('webpack/lib/ProvidePlugin');
-
-var root = function(args) {
-  args = Array.prototype.slice.call(arguments, 0);
-  return path.join.apply(path, [__dirname].concat(args));
-}
 
 module.exports = {
   metadata: metadata,
@@ -37,7 +33,7 @@ module.exports = {
               test: /\.html$/,
               loader: 'raw',
               exclude: [
-                  root('src/index.html')
+                  helpers.root('src/index.html')
               ]
           },
           {
