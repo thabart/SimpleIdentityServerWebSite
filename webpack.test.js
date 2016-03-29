@@ -6,11 +6,24 @@ var root = function(args) {
 }
 
 module.exports = {
+    resolve: {
+        cache: false,
+        extensions: ['', '.ts', '.js', '.json', '.css', '.html']
+    },    
+    devtool: 'inline-source-map',
     module: {
         loaders: [
             {
                 test: /\.ts$/,
-                loader: 'awesome-typescript'
+                loader: 'awesome-typescript',
+                query: {
+                    'compilerOptions': {
+                        'removeComments': true,
+                        'noEmitHelpers': true,
+                        'experimentalDecorators': true
+                    }
+                },
+                exclude: [/node_modules/]
             },
             {
               test: /\.scss$/,

@@ -1,5 +1,4 @@
 'use strict';
-
 Error.stackTraceLimit = Infinity;
 require('phantomjs-polyfill');
 require('es6-promise');
@@ -12,7 +11,6 @@ require('es7-reflect-metadata/dist/browser');
 // require('jquery/dist/jquery.js');
 
 var appContext = require.context('./src', true, /\.spec\.ts/);
-
 appContext.keys().forEach(appContext);
 
 var domAdapter = require('angular2/src/platform/browser/browser_adapter');
