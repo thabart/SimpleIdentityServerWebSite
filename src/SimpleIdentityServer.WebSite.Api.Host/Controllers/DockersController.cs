@@ -22,7 +22,6 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
     [Route(Constants.RouteValues.Docker)]
     public class DockersController : Controller
     {
-        // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {

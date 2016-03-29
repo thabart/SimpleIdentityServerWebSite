@@ -14,17 +14,15 @@
 // limitations under the License.
 #endregion
 
-namespace SimpleIdentityServer.WebSite.Api.Host
+namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
 {
-    public static class Constants
+    public interface IStartDockerContainerOperation
     {
-        public static class RouteValues
-        {
-            public const string Root = "api";
 
-            public const string Docker = Root + "/dockers";
+    }
 
-            public const string Users = Root + "/users";
-        }
+    public sealed class StartDockerContainerOperation
+    {
+
     }
 }

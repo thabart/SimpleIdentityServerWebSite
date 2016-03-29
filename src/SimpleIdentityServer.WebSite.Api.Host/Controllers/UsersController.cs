@@ -14,17 +14,16 @@
 // limitations under the License.
 #endregion
 
-namespace SimpleIdentityServer.WebSite.Api.Host
+using Microsoft.AspNet.Mvc;
+
+namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
-    public static class Constants
+    [Route(Constants.RouteValues.Users)]
+    public class UsersController : Controller
     {
-        public static class RouteValues
-        {
-            public const string Root = "api";
-
-            public const string Docker = Root + "/dockers";
-
-            public const string Users = Root + "/users";
-        }
+        // TODO : Local registration
+        // TODO : Remote registration
+        // TODO : Local login
+        // TODO : Remote login
     }
 }

@@ -7,14 +7,15 @@
     "licenseUrl": "",
 
     "dependencies": {
+        "Docker.DotNet": "1.2.2"
     },
-  
-	"tooling": {
-		"defaultNamespace": "SimpleIdentityServer.WebSite.Api.Core"
-	},
+
+    "tooling": {
+        "defaultNamespace": "SimpleIdentityServer.WebSite.Api.Core"
+    },
 
     "frameworks": {
-      "dnx451": {},
-      "dnxcore50": { }
+        "dnx451": { },
+        "dnxcore50": { }
     }
 }
