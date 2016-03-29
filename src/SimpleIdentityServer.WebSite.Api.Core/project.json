@@ -1,0 +1,20 @@
+{
+    "version": "1.0.0-*",
+    "description": "SimpleIdentityServer.WebSite.Api.Core Class Library",
+    "authors": [ "Thierry Habart" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+    },
+  
+	"tooling": {
+		"defaultNamespace": "SimpleIdentityServer.WebSite.Api.Core"
+	},
+
+    "frameworks": {
+      "dnx451": {},
+      "dnxcore50": { }
+    }
+}
