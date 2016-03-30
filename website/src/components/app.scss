@@ -1,22 +1,5 @@
 $navbar-background: #f8f8f8;
 $navbar-bordercolor: #e7e7e7;
-$btn-color: rgba(255, 185, 0, 0.73);
-$btn-color-hover: rgba(255, 165, 0, 0.83);
-$btn-border: 1px solid rgba(255, 165, 0, 0.71);
-
-body {
-    font-family: "Segoe UI Light", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    background-color: red !important;
-}
-
-.btn-orange {
-    background-color: $btn-color;
-    border: $btn-border;
-}
-
-.btn-orange:hover {
-    background-color: $btn-color-hover;
-}
 
 .idserver {
     background-color: $navbar-background;

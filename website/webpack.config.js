@@ -42,7 +42,7 @@ module.exports = {
           },
           {
               test: /\.css$/,
-              loader:'raw'
+              loaders: ['style', 'css']
           },
           {
               test: /bootstrap\/dist\/js\/umd\//,
