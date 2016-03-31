@@ -4,8 +4,8 @@
   "description": "Simple Identity Server WebSite",
   "main": "index.js",
   "scripts": {
-    "build:dev": "node ./node_modules/webpack/bin/webpack",
-    "run:dev": "./node_modules/.bin/webpack-dev-server --progress",
+    "build:dev": "node ./node_modules/webpack/bin/webpack --config webpack.dev.config.js",
+    "run:dev": "./node_modules/.bin/webpack-dev-server --config webpack.dev.config.js --progress",
     "test": "node ./node_modules/karma/bin/karma start",
     "typings": "./node_modules/.bin/typings install",
     "postinstall": "npm run typings"

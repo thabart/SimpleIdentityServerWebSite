@@ -1,24 +1,17 @@
-const metadata = {
-    title: 'Simple Identity Server',
-    baseUrl: '/',
-    host: 'localhost',
-    port: 3000,
-    ENV: 'development'
-};
+'use strict';
 
 var path = require('path'),
     srcPath = path.join(__dirname, 'src'),
-    webpack = require('webpack'),
     helpers = require('./helpers');
 var HtmlWebpackPlugin = require('html-webpack-plugin'),
-    ProvidePlugin = require('webpack/lib/ProvidePlugin');
-
+    ProvidePlugin = require('webpack/lib/ProvidePlugin'),
+    DefinePlugin = require('webpack/lib/DefinePlugin');
+    
 module.exports = {
-  metadata: metadata,
   entry: {
       'vendors': path.join(srcPath, 'vendors.ts'),
       'main': path.join(srcPath, 'main.ts')
-  },
+  },  
   output: {
       path: 'builds',
       filename: '[name].js'
@@ -49,7 +42,7 @@ module.exports = {
               loader: 'imports?jQuery=jquery'
           }
       ]
-  },
+  },  
   plugins: [
       new HtmlWebpackPlugin({
           template: 'src/index.html',
@@ -63,9 +56,5 @@ module.exports = {
       new ProvidePlugin({
           "window.Tether": "tether"
       })
-  ],
-  devServer: {
-      port: metadata.port,
-      host: metadata.host
-  }
+  ]
 };
