@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component, OnInit } from 'angular2/core';
 import { RouteConfig } from 'angular2/router';
 import { LoggedInOutlet } from './loggedInOutlet.ts';
 import { LoginComponent } from './login/login.ts';
@@ -29,4 +29,10 @@ import { Settings } from './settings.ts'
     }
 ])
 
-export class AppComponent { }
+export class AppComponent implements OnInit {
+    ngOnInit() {
+        if (window.location.hash) {
+            console.log('hash');
+        }
+    }
+}
