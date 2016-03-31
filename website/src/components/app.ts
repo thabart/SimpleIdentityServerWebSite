@@ -3,12 +3,16 @@ import { RouteConfig } from 'angular2/router';
 import { LoggedInOutlet } from './loggedInOutlet.ts';
 import { LoginComponent } from './login/login.ts';
 import { HomeComponent } from './home/home.ts';
+import { Settings } from './settings.ts'
 
 @Component({
     selector: 'app',
     template: require('./app.html'),
     styles: [ require('./app.scss') ],
-    directives: [ LoggedInOutlet ]
+    directives: [ LoggedInOutlet ],
+    providers: [
+        Settings
+    ]
 })
 
 @RouteConfig([

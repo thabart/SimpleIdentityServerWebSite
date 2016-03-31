@@ -16,7 +16,7 @@ module.exports = webPackMerge(commonConfig, {
   metadata: metadata,
   plugins: [
       new DefinePlugin({
-          'AUTHORIZATION_URL': metadata.AUTHORIZATION_URL
+          'AUTHORIZATION_URL': JSON.stringify(metadata.AUTHORIZATION_URL)
       })
   ],
   devServer: {
