@@ -10,9 +10,17 @@ export class LoginComponent {
     authenticate() {
         var authorizationUrl = this._settings.getAuthorizationUrl();
         var clientId = this._settings.getClientId();
-        var callbackUrl = this._settings.getCurrentUrl() + "/callback";
-        authorizationUrl += "/authorization?scope=openid%20profile%20role&response_type=id_token&client_id="
-            + clientId + "&redirect_uri=" + callbackUrl + "&nonce=nonce";
-        window.location.href = authorizationUrl;      
+        var callbackUrl = this._settings.getCurrentUrl();
+        var scope = "openid profile role";
+        var responseType = "id_token";
+        var nonce = "N" + Math.random() + "" + Date.now();
+        var redirectUrl = 
+            authorizationUrl + "/authorization" +
+            "?scope="+ encodeURI(scope) + 
+            "&response_type=" + encodeURI(responseType) +
+            "&client_id=" + clientId + 
+            "&redirect_uri=" + encodeURI(callbackUrl) + 
+            "&nonce=" + encodeURI(nonce);
+        window.location.href = redirectUrl;      
     }    
 }
