@@ -4,6 +4,7 @@ import { LoggedInOutlet } from './loggedInOutlet.ts';
 import { LoginComponent } from './login/login.ts';
 import { HomeComponent } from './home/home.ts';
 import { Settings } from './settings.ts'
+import { SecurityService } from './service/security.ts'
 
 @Component({
     selector: 'app',

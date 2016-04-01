@@ -8,4 +8,7 @@ export class Settings {
     getClientId() {
         return "SimpleIdentityServerWebSite";
     }
+    getClientSecret() {
+        return "SimpleIdentityServerWebSite";
+    }
 }

@@ -1,0 +1,11 @@
+{
+    "typescript": {
+        "target": "ES5",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "sources" : [
+            "src/**/*.ts",
+            "typings/browser.d.ts"
+        ]
+    }
+}
