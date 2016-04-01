@@ -21,10 +21,12 @@ export class LoggedInOutlet extends RouterOutlet
     activate(instruction: ComponentInstruction)
     {
         var url = this._router.lastNavigationAttempt;
-        if (!localStorage.getItem('access_token_authorization_server'))
+        if (!localStorage.getItem('access_token_authorization_server') && 
+            url != '/error/callback')
         {
             this._router.navigateByUrl('/login');
-            return super.activate(instruction);
         }
+            
+        return super.activate(instruction);
     }    
 }

@@ -1,8 +1,10 @@
+import { Injectable } from 'angular2/core'
 import { Router } from 'angular2/router'
 import { URLSearchParams } from 'angular2/http'
 import { Settings } from '../settings.ts'
 import { IdentityServerService, IntrospectionResponse, IntrospectionRequest } from './identityserver.ts'
 
+@Injectable()
 export class SecurityService {
     constructor(
         private _router: Router,
@@ -25,10 +27,11 @@ export class SecurityService {
         return redirectUrl;
     }
     authenticateResourceOwner(hashParameter : string) {
+        console.log(hashParameter);
         let result = this.extractAccessToken(hashParameter);
         if (result == null)
         {
-            this._router.navigateByUrl('/login');
+            this._router.navigateByUrl('/error/callback');
             return;
         }
         
@@ -38,10 +41,12 @@ export class SecurityService {
             .then(res => {
                 if (res.active == false)
                 {
-                    this._router.navigateByUrl('/login');                    
+                    console.log('ERROR');
+                    this._router.navigateByUrl('/error/callback');                    
                 }
                 else
-                {                    
+                {               
+                    localStorage.setItem('access_token_authorization_server', result.token);
                     this._router.navigateByUrl('/home');
                 }
             });
@@ -54,7 +59,7 @@ export class SecurityService {
                 
         var queryString = parameter.substr(1);        
         var params = new URLSearchParams(queryString);
-        var token = params.get('token');
+        var token = params.get('access_token');
         var state = params.get('state');
         if (token == null)
         {

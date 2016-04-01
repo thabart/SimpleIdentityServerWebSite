@@ -57,7 +57,7 @@ describe('Test Security service', () => {
     it("When passing an incorrect hash fragment then redirect to the login page", inject([Router], (routerMock) => {
         // ASSERT
         spyOn(routerMock, 'navigateByUrl').and.callFake(function(route) {
-            expect(route).toBe('/login');
+            expect(route).toBe('/error/callback');
         });
 
         // ARRANGE
@@ -71,7 +71,7 @@ describe('Test Security service', () => {
     it ("When passing a hash fragment with no access token then redirect to the login page", inject([Router], (routerMock) => {
         // ASSERT
         spyOn(routerMock, 'navigateByUrl').and.callFake(function(route) {
-            expect(route).toBe('/login');
+            expect(route).toBe('/error/callback');
         });
                 
         // ARRANGE
@@ -84,7 +84,7 @@ describe('Test Security service', () => {
     it ("When the access token is not correct then redirect to login page", inject([Router], (routerMock) => {
         // ASSERT
         spyOn(routerMock, 'navigateByUrl').and.callFake(function(route) {
-            expect(route).toBe('/login');
+            expect(route).toBe('/error/callback');
         });
                 
         // ARRANGE
@@ -103,7 +103,7 @@ describe('Test Security service', () => {
         var instance = new SecurityService(routerMock, null, identityServerService);
         
         // ACT
-        instance.authenticateResourceOwner("#state=none&token=invalid_token");
+        instance.authenticateResourceOwner("#state=none&access_token=invalid_token");
     }));
 
     it ("When the access token is correct then redirect to home page", inject([Router], (routerMock) => {
@@ -128,7 +128,7 @@ describe('Test Security service', () => {
         var instance = new SecurityService(routerMock, null, identityServerService);
         
         // ACT
-        instance.authenticateResourceOwner("#state=none&token=valid_token");
+        instance.authenticateResourceOwner("#state=none&access_token=valid_token");
     }));
 
 });

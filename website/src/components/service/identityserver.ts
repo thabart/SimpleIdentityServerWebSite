@@ -1,3 +1,4 @@
+import { Injectable } from 'angular2/core'
 import { Settings } from '../settings.ts'
 import { Http, Headers, RequestOptions } from 'angular2/http'
 
@@ -12,6 +13,7 @@ export class IntrospectionResponse
     public scope : string;
 }
 
+@Injectable()
 export class IdentityServerService
 {
     private _introspectionPartialPath = "/introspect";
