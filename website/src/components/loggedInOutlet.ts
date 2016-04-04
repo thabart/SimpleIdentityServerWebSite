@@ -21,8 +21,7 @@ export class LoggedInOutlet extends RouterOutlet
     activate(instruction: ComponentInstruction)
     {
         var url = this._router.lastNavigationAttempt;
-        if (!localStorage.getItem('access_token_authorization_server') && 
-            url != '/error/callback')
+        if (!localStorage.getItem('access_token_authorization_server'))
         {
             this._router.navigateByUrl('/login');
         }

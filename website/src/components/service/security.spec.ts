@@ -1,5 +1,3 @@
-/// <reference path="../../../node_modules/angular2/typings/browser.d.ts" />
-
 import {
     it,
     inject,
@@ -109,7 +107,7 @@ describe('Test Security service', () => {
     it ("When the access token is correct then redirect to home page", inject([Router], (routerMock) => {
         // ASSERT
         spyOn(routerMock, 'navigateByUrl').and.callFake(function(route) {
-            expect(route).toBe('/home');
+            expect(route).toBe('/management');
         });
                 
         // ARRANGE

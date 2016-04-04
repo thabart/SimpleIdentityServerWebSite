@@ -1,0 +1,15 @@
+<header>
+    <nav class="navbar navbar-light idserver">
+        <div class="container">
+            <a class="navbar-brand" href="#">Simple Identity Server</a>            
+            <ul class="nav navbar-nav pull-xs-right" [hidden]="isLogoutNotDisplayed">
+                <li>
+                    <a (click)="disconnect()" href="#" class="nav-link">Disconnect</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <loggedin-router-outlet></loggedin-router-outlet>
+</div>

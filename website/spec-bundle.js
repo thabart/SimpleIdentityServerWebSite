@@ -1,4 +1,5 @@
 'use strict';
+
 Error.stackTraceLimit = Infinity;
 require('phantomjs-polyfill');
 require('es6-promise');

@@ -6,11 +6,12 @@ import { IdentityServerService, IntrospectionResponse, IntrospectionRequest } fr
 
 @Injectable()
 export class SecurityService {
+    private _localStorageName : string = 'access_token_authorization_server';
     constructor(
         private _router: Router,
         private _settings: Settings,
         private _identityServerService: IdentityServerService) { }
-    getAuthorizationUrl() : String {
+    getAuthorizationUrl() : string {
         var authorizationUrl = this._settings.getAuthorizationUrl();
         var clientId = this._settings.getClientId();
         var callbackUrl = this._settings.getCurrentUrl();
@@ -27,7 +28,6 @@ export class SecurityService {
         return redirectUrl;
     }
     authenticateResourceOwner(hashParameter : string) {
-        console.log(hashParameter);
         let result = this.extractAccessToken(hashParameter);
         if (result == null)
         {
@@ -41,15 +41,21 @@ export class SecurityService {
             .then(res => {
                 if (res.active == false)
                 {
-                    console.log('ERROR');
                     this._router.navigateByUrl('/error/callback');                    
                 }
                 else
                 {               
-                    localStorage.setItem('access_token_authorization_server', result.token);
-                    this._router.navigateByUrl('/home');
+                    localStorage.setItem(this._localStorageName, result.token);
+                    this._router.navigateByUrl('/management');
                 }
             });
+    }
+    isResourceOwnerConnected() {
+        return localStorage.getItem(this._localStorageName) != null;
+    }
+    disconnectResourceOwner() {
+        localStorage.removeItem(this._localStorageName);
+        this._router.navigateByUrl('/login');
     }
     private extractAccessToken(parameter : string) {
         if (!parameter || parameter.indexOf('#') != 0)

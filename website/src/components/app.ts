@@ -1,38 +1,34 @@
 import { Component, OnInit } from 'angular2/core'
-import { RouteConfig } from 'angular2/router'
-import { LoggedInOutlet } from './loggedInOutlet.ts'
+import { RouteConfig, RouterOutlet } from 'angular2/router'
 import { LoginComponent } from './login/login.ts'
-import { HomeComponent } from './home/home.ts'
+import { IndexComponent } from './index.ts'
 import { Settings } from './settings.ts'
 import { SecurityService } from './service/security.ts'
 import { CallBackErrorComponent } from './error/callback-error.ts'
 
 @Component({
-    selector: 'app',
+    selector: 'app',    
     template: require('./app.html'),
-    styles: [ require('./app.scss') ],
-    directives: [ LoggedInOutlet ],
     providers: [
         Settings
-    ]
+    ],
+    directives: [ RouterOutlet ]
 })
 
 @RouteConfig([
     {
-      path: '/',
-      name: 'Index',
-      component: HomeComponent,
-      useAsDefault: true  
+        path: '/',
+        redirectTo: ['/Management']
+    },
+    {
+        path: '/management/...',
+        component: IndexComponent,
+        name: 'Management'
     },
     {
         path: '/login',
         name: 'Login',
         component: LoginComponent
-    }, 
-    {
-        path: '/home',
-        name: 'Home',
-        component: HomeComponent
     },
     {
         path: '/error/callback',
@@ -42,11 +38,12 @@ import { CallBackErrorComponent } from './error/callback-error.ts'
 ])
 
 export class AppComponent implements OnInit {
+    isLogoutNotDisplayed: boolean;
     constructor(private _securityService : SecurityService) { }
     ngOnInit() {
         var hash = this.getAuthorizationCallbackQueryString();
         if (hash != null) {
-            // Authorization callback
+            // Execute authorization callbackAuthorization callback
             this._securityService.authenticateResourceOwner(hash);
         }
     }
