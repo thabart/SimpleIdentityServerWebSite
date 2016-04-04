@@ -129,4 +129,29 @@ describe('Test Security service', () => {
         instance.authenticateResourceOwner("#state=none&access_token=valid_token");
     }));
 
+    it("When the a resource owner is disconnected then redirect to the Login page", inject([Router], (routerMock) => {
+        // ASSERT
+        spyOn(routerMock, 'navigateByUrl').and.callFake(function(route) {
+            expect(route).toBe('/login');
+        });
+        
+        // ARRANGE
+        var instance = new SecurityService(routerMock, null, null);
+        
+        // ACT
+        instance.disconnectResourceOwner();
+    }));
+
+    it("When a resource owner is authenticated then the function 'isResourceOwnerConnected' returns true", function() {
+        // ARRANGE
+        var instance = new SecurityService(null, null, null);
+        
+        // ACT
+        localStorage.setItem('access_token_authorization_server', 'value');
+        var isResourceOwnerConnected = instance.isResourceOwnerConnected();
+        
+        // ASSERT
+        expect(isResourceOwnerConnected).toBe(true);
+    });
+
 });
