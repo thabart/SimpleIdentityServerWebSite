@@ -1,22 +1,29 @@
 import { Component, OnInit } from 'angular2/core'
 import { LoginComponent } from './login/login.ts'
 import { SecurityService } from './service/security.ts'
-import { RouteConfig } from 'angular2/router'
-import { HomeComponent } from './home/home.ts'
+import { RouteConfig, RouterLink } from 'angular2/router'
 import { LoggedInOutlet } from './loggedInOutlet.ts'
+
+import { ProfileComponent } from './profile/profile.ts'
+import { InstanceComponent } from './instance/instance.ts'
 
 @Component({
     template: require('./index.html'),    
     styles: [ require('./index.scss') ],
-    directives: [ LoggedInOutlet ]
+    directives: [ LoggedInOutlet, RouterLink ]
 })
 
 @RouteConfig([
     {
-        path: '/home',
-        name: 'Home',
-        component: HomeComponent,        
+        path: '/profile',
+        name: 'Profile',
+        component: ProfileComponent,        
         useAsDefault: true 
+    },
+    {
+        path: '/instance',
+        name: 'Instance',
+        component: InstanceComponent
     }
 ])
 

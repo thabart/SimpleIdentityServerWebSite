@@ -1,9 +1,20 @@
 $navbar-background: #f8f8f8;
 $navbar-bordercolor: #e7e7e7;
+$sidebar-borderleft-color: #F7AE59;
+$sidebar-background-color: #FAFAFB;
 
 .idserver {
     background-color: $navbar-background;
     border: 1px solid $navbar-bordercolor;
     border-radius: 0;
     margin-bottom: 1em;
+}
+
+ul.id-server a.router-link-active {
+    border-left: 2px solid $sidebar-borderleft-color;
+    background-color: $sidebar-background-color;
+}
+
+ul.id-server > li > a {
+    padding: 10px 15px;
 }

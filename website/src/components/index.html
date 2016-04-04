@@ -11,5 +11,19 @@
     </nav>
 </header>
 <div class="container">
-    <loggedin-router-outlet></loggedin-router-outlet>
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav id-server">
+                <li class="nav-item">
+                    <a [routerLink]="['Profile']" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['Instance']" class="nav-link">Instance</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">            
+            <loggedin-router-outlet></loggedin-router-outlet>
+        </div>
+    </div>
 </div>
