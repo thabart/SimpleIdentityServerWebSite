@@ -1958,9 +1958,11 @@
           "System.Web"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
       },
@@ -3971,10 +3973,12 @@
           "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         }
@@ -7023,9 +7027,11 @@
           "System.Web"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
       },
@@ -9258,9 +9264,11 @@
           "System.Web"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
       },
@@ -11679,10 +11687,12 @@
           "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         }
@@ -15164,10 +15174,12 @@
           "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         }
@@ -18671,10 +18683,14 @@
     },
     "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "rW5tbue6WOUX2pZM8GBsVO4PzX5kiPSI75Aq022+bWbIKFlkG8Cxju1i+8tSPE8Gvkui8wlsJl33gaEJCnTuCQ==",
+      "sha512": "QQfvluXa9Od4e92zNNaWOsWpGgWkREAO/nl0UIl5o2kVzxB+VbtVdJ7J06pPAWv9euDEwhEN//XvGQKS1MLrNA==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.xml",
         "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll",

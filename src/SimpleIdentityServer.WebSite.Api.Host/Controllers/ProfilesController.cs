@@ -17,8 +17,11 @@
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles;
+using SimpleIdentityServer.WebSite.Api.Core.Exceptions;
+using SimpleIdentityServer.WebSite.Api.Host.DTOs.Responses;
+using SimpleIdentityServer.WebSite.Api.Host.Errors;
+using SimpleIdentityServer.WebSite.Api.Host.Extensions;
 using System.Security.Claims;
-using System.Linq;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
@@ -40,17 +43,25 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 
         [HttpGet(Constants.ProfileActions.CurrentProfile)]
         [Authorize]
-        public string GetCurrentProfile()
+        public ProfileResponse GetCurrentProfile()
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
             if (claimsIdentity == null)
             {
-                // TODO : throw an exception
+                throw new IdentityServerException(ErrorCodes.InternalErrorCode,
+                    ErrorDescriptions.TheClaimsCannotBeRetrieved);
             }
 
+            var subject = claimsIdentity.GetSubject();
+            if (string.IsNullOrWhiteSpace(subject))
+            {
+                throw new IdentityServerException(ErrorCodes.InternalErrorCode,
+                    ErrorDescriptions.TheSubjectCannotBeRetrieved);
+            }
 
-            var result = claimsIdentity.Claims.First(c => c.Type == "sub").Value;
-            return result;
+            return _profileActions
+                .GetCurrentProfile(subject)
+                .ToResponse();
         }
 
         #endregion

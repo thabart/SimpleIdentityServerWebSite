@@ -38,5 +38,25 @@ namespace SimpleIdentityServer.WebSite.Api.Host
 
             public const string ErrorDescription = "error_description";
         }
+
+        public static class ProfileResponseNames
+        {
+            public const string Subject = "subject";
+
+            public const string Picture = "picture";
+
+            public const string AuthorizationServerUrl = "authorization_server";
+
+            public const string ManagerWebSiteUrl = "manager_website";
+
+            public const string ManagerWebSiteApiUrl = "manager_website_api";
+
+            public const string IsActive = "is_active";
+        }
+
+        public static class ClaimNames
+        {
+            public const string Subject = "sub";
+        }
     }
 }
