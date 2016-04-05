@@ -26,6 +26,7 @@ using SimpleIdentityServer.UserInformation.Authentication;
 using SimpleIdentityServer.WebSite.Api.Core;
 using SimpleIdentityServer.WebSite.Api.Host.Middlewares;
 using SimpleIdentityServer.WebSite.Api.Host.Swagger;
+using SimpleIdentityServer.WebSite.EF;
 using Swashbuckle.SwaggerGen;
 using System.Collections.Generic;
 using System.Reflection;
@@ -62,6 +63,8 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             public string AuthorizationUrl { get; set; }
 
             public string TokenUrl { get; set; }
+
+            public string ConnectionString { get; set; }
         }
 
         private SimpleIdentityServerOptions _simpleIdentityServerOptions;
@@ -181,13 +184,15 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             {
                 AuthorizationUrl = Configuration["AuthorizationUrl"],
                 UserInformationUrl = Configuration["UserInfoUrl"],
-                TokenUrl = Configuration["TokenUrl"]
+                TokenUrl = Configuration["TokenUrl"],
+                ConnectionString = Configuration["Data:DefaultConnection:ConnectionString"]
             };
         }
 
         private void RegisterDependencies(IServiceCollection services)
         {
             services.AddSimpleIdentityServerWebSite();
+            services.AddSimpleIdentityServerEf(_simpleIdentityServerOptions.ConnectionString);
         }
 
         #endregion

@@ -33,6 +33,7 @@
     "SimpleIdentityServer.UserInformation.Authentication": "1.0.0-rc2-final",
     "Swashbuckle.SwaggerGen": "6.0.0-rc1-final",
     "Swashbuckle.SwaggerUi": "6.0.0-rc1-final",
+    "SimpleIdentityServer.WebSite.EF": "",
     "SimpleIdentityServer.WebSite.Api.Core": ""
   },
 
