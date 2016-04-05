@@ -1,0 +1,33 @@
+{
+    "version": "1.0.0-*",
+    "description": "",
+    "authors": [ "thierry habart" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+    "tooling": {
+        "defaultNamespace": "SimpleIdentityServer.WebSite.Api.Core.Tests"
+    },
+  "dependencies": {
+    "NUnit": "3.0.1",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204",
+    "Microsoft.AspNet.TestHost": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Authorization": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+    "SimpleIdentityServer.WebSite.Api.Core": ""
+  },
+    "commands": {
+        "test": "xunit.runner.dnx"
+    },
+  "frameworks": {
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Core": "4.0.0.0"
+      },
+      "dependencies": {
+        "Moq": "4.2.1510.2205"
+      }
+    }
+  }
+}

@@ -23,6 +23,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using SimpleIdentityServer.UserInformation.Authentication;
+using SimpleIdentityServer.WebSite.Api.Core;
 using SimpleIdentityServer.WebSite.Api.Host.Swagger;
 using Swashbuckle.SwaggerGen;
 using System.Collections.Generic;
@@ -178,6 +179,11 @@ namespace SimpleIdentityServer.WebSite.Api.Host
                 UserInformationUrl = Configuration["UserInfoUrl"],
                 TokenUrl = Configuration["TokenUrl"]
             };
+        }
+
+        private void RegisterDependencies(IServiceCollection services)
+        {
+            services.AddSimpleIdentityServerWebSite();
         }
 
         #endregion

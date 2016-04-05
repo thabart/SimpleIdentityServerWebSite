@@ -14,18 +14,40 @@
 // limitations under the License.
 #endregion
 
+using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc;
+using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles;
+using System.Security.Claims;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
     [Route(Constants.RouteValues.Profile)]
     public class ProfileController : Controller
     {
+        private readonly IProfileActions _profileActions;
+
+        #region Constructor
+
+        public ProfileController(IProfileActions profileActions)
+        {
+            _profileActions = profileActions;
+        }
+
+        #endregion
+
         #region Public methods
-        
+
         [HttpGet(Constants.ProfileActions.CurrentProfile)]
+        [Authorize]
         public string GetCurrentProfile()
         {
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+            if (claimsIdentity == null)
+            {
+                // TODO : throw an exception
+            }
+
+
             var name = User.Identity.Name;
             return name;
         }

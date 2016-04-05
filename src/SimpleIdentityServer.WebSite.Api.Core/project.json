@@ -7,7 +7,8 @@
     "licenseUrl": "",
 
     "dependencies": {
-        "Docker.DotNet": "1.2.2"
+      "Docker.DotNet": "1.2.2",      
+      "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final"
     },
 
     "tooling": {
