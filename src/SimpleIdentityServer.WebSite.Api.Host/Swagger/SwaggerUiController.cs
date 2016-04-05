@@ -14,22 +14,34 @@
 // limitations under the License.
 #endregion
 
-namespace SimpleIdentityServer.WebSite.Api.Host
+using Microsoft.AspNet.Mvc;
+using System.Collections.Generic;
+
+namespace SimpleIdentityServer.WebSite.Api.Host.Swagger
 {
-    public static class Constants
+    public class SwaggerUiController : Controller
     {
-        public static class RouteValues
+        #region Public methods
+
+        [HttpGet("swagger/ui/index.html")]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public IActionResult Index()
         {
-            public const string Root = "api";
-
-            public const string Docker = Root + "/dockers";
-
-            public const string Profile = Root + "/profiles";
+            return View("~/Swagger/index.cshtml", GetDiscoveryUrls());
         }
 
-        public static class ProfileActions
+        #endregion
+
+        #region Private methods
+
+        private IDictionary<string, string> GetDiscoveryUrls()
         {
-            public const string CurrentProfile = "current";
+            return new Dictionary<string, string>
+            {
+                { "V1", "/swagger/v1/swagger.json" }
+            };
         }
+
+        #endregion
     }
 }

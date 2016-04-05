@@ -15,16 +15,55 @@
 #endregion
 
 using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.FileProviders;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
+using SimpleIdentityServer.UserInformation.Authentication;
+using SimpleIdentityServer.WebSite.Api.Host.Swagger;
+using Swashbuckle.SwaggerGen;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace SimpleIdentityServer.WebSite.Api.Host
 {
     public class Startup
     {
+        private class AssignOauth2SecurityRequirements : IOperationFilter
+        {
+            public void Apply(Operation operation, OperationFilterContext context)
+            {
+                var assignedScopes = new List<string>
+                {
+                    "openid"
+                };
+
+                var oauthRequirements = new Dictionary<string, IEnumerable<string>>
+                {
+                    {
+                        "oauth2", assignedScopes
+                    }
+                };
+
+                operation.Security = new List<IDictionary<string, IEnumerable<string>>>();
+                operation.Security.Add(oauthRequirements);
+            }
+        }
+
+        private class SimpleIdentityServerOptions
+        {
+            public string UserInformationUrl { get; set; }
+
+            public string AuthorizationUrl { get; set; }
+
+            public string TokenUrl { get; set; }
+        }
+
+        private SimpleIdentityServerOptions _simpleIdentityServerOptions;
+
         #region Properties
 
         public IConfigurationRoot Configuration { get; set; }
@@ -42,6 +81,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            InitializeOptions();
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -49,7 +89,45 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
                .AllowAnyMethod()
                .AllowAnyHeader()));
+
             services.AddLogging();
+
+            services.AddSwaggerGen();
+            services.ConfigureSwaggerDocument(opts =>
+            {
+                opts.SingleApiVersion(new Info
+                {
+                    Version = "v1",
+                    Title = "Simple identity website",
+                    TermsOfService = "None"
+                });
+                opts.SecurityDefinitions.Add("oauth2", new OAuth2Scheme
+                {
+                    Type = "oauth2",
+                    Flow = "implicit",
+                    AuthorizationUrl = _simpleIdentityServerOptions.AuthorizationUrl,
+                    TokenUrl = _simpleIdentityServerOptions.TokenUrl,
+                    Description = "Implicit flow",
+                    Scopes = new Dictionary<string, string>
+                    {
+                        { "openid", "OpenId" },
+                        { "role" , "Get the roles" },
+                        { "profile" , "Get the profile" }
+                    }
+                });
+                opts.OperationFilter<AssignOauth2SecurityRequirements>();
+            });
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                options.FileProvider = new CompositeFileProvider(
+                    new EmbeddedFileProvider(
+                        typeof(SwaggerUiController).GetTypeInfo().Assembly,
+                        "SimpleIdentityServer.WebSite.Api.Host"
+                    ),
+                    options.FileProvider
+                );
+            });
+
             services.AddMvc();
         }
 
@@ -57,14 +135,18 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             IHostingEnvironment env,
             ILoggerFactory loggerFactory)
         {
+            var userInformationUrl = Configuration["UserInfoUrl"];
+
             loggerFactory.AddConsole();
             app.UseCors("AllowAll");
 
+            app.UseStatusCodePages();
+
             var userInformationOptions = new UserInformationOptions
             {
-                UserInformationEndPoint = authorizationServerOptions.UserInformationUrl
+                UserInformationEndPoint = userInformationUrl
             };
-            applicationBuilder.UseAuthenticationWithUserInformation(userInformationOptions);
+            app.UseAuthenticationWithUserInformation(userInformationOptions);
 
             app.UseMvc(routes =>
             {
@@ -72,6 +154,9 @@ namespace SimpleIdentityServer.WebSite.Api.Host
                     name: "default",
                     template: "{controller}/{action}/{id?}");
             });
+
+            app.UseSwaggerGen();
+            app.UseSwaggerUi();
         }
 
         #endregion
@@ -80,6 +165,20 @@ namespace SimpleIdentityServer.WebSite.Api.Host
 
         // Entry point for the application.
         public static void Main(string[] args) => WebApplication.Run<Startup>(args);
+
+        #endregion
+
+        #region Private methods
+
+        private void InitializeOptions()
+        {
+            _simpleIdentityServerOptions = new SimpleIdentityServerOptions
+            {
+                AuthorizationUrl = Configuration["AuthorizationUrl"],
+                UserInformationUrl = Configuration["UserInfoUrl"],
+                TokenUrl = Configuration["TokenUrl"]
+            };
+        }
 
         #endregion
     }

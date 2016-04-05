@@ -26,7 +26,8 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
         [HttpGet(Constants.ProfileActions.CurrentProfile)]
         public string GetCurrentProfile()
         {
-            return "test";
+            var name = User.Identity.Name;
+            return name;
         }
 
         #endregion

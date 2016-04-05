@@ -247,10 +247,10 @@
           "lib/net451/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
+      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc2-15922": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final"
+          "Microsoft.Extensions.Primitives": "1.0.0-rc2-15967"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -263,6 +263,42 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Composite/1.0.0-rc2-15922": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc2-15922"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -1780,6 +1816,44 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
       },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        }
+      },
       "System.Collections/4.0.0": {
         "type": "package",
         "compile": {
@@ -2205,18 +2279,45 @@
           "lib/dotnet5.4/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
+      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc2-15922": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
-          "System.IO": "4.0.11-beta-23516",
-          "System.Resources.ResourceManager": "4.0.1-beta-23516"
+          "Microsoft.Extensions.Primitives": "1.0.0-rc2-15967",
+          "System.IO": "4.0.11-rc2-23623",
+          "System.Resources.ResourceManager": "4.0.1-rc2-23623"
         },
         "compile": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Composite/1.0.0-rc2-15922": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc2-15922"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Reflection": "4.0.10",
+          "System.Runtime.Extensions": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -3592,6 +3693,33 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         }
       },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        }
+      },
       "System.AppContext/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -3876,7 +4004,7 @@
           "ref/dotnet5.1/System.Globalization.Extensions.dll": {}
         }
       },
-      "System.IO/4.0.11-beta-23516": {
+      "System.IO/4.0.11-rc2-23623": {
         "type": "package",
         "dependencies": {
           "System.Runtime": "4.0.20",
@@ -4169,7 +4297,7 @@
           "lib/DNXCore50/System.Resources.ReaderWriter.dll": {}
         }
       },
-      "System.Resources.ResourceManager/4.0.1-beta-23516": {
+      "System.Resources.ResourceManager/4.0.1-rc2-23623": {
         "type": "package",
         "dependencies": {
           "System.Globalization": "4.0.0",
@@ -4529,6 +4657,26 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
+      },
+      "System.Xml.XPath/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XPath.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XPath.dll": {}
+        }
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
@@ -4776,10 +4924,10 @@
           "lib/net451/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
+      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc2-15922": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final"
+          "Microsoft.Extensions.Primitives": "1.0.0-rc2-15967"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -4792,6 +4940,42 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Composite/1.0.0-rc2-15922": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc2-15922"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -6310,6 +6494,44 @@
         },
         "runtime": {
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.Collections/4.0.0": {
@@ -6769,10 +6991,10 @@
           "lib/net451/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
+      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc2-15922": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final"
+          "Microsoft.Extensions.Primitives": "1.0.0-rc2-15967"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -6785,6 +7007,42 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Composite/1.0.0-rc2-15922": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc2-15922"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -8305,6 +8563,44 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
       },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        }
+      },
       "System.Collections/4.0.0": {
         "type": "package",
         "compile": {
@@ -8730,18 +9026,45 @@
           "lib/dotnet5.4/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
+      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc2-15922": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
-          "System.IO": "4.0.11-beta-23516",
-          "System.Resources.ResourceManager": "4.0.1-beta-23516"
+          "Microsoft.Extensions.Primitives": "1.0.0-rc2-15967",
+          "System.IO": "4.0.11-rc2-23623",
+          "System.Resources.ResourceManager": "4.0.1-rc2-23623"
         },
         "compile": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Composite/1.0.0-rc2-15922": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc2-15922"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Reflection": "4.0.10",
+          "System.Runtime.Extensions": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -10420,6 +10743,33 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         }
       },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        }
+      },
       "System.AppContext/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -10749,7 +11099,7 @@
           "ref/dotnet5.1/System.Globalization.Extensions.dll": {}
         }
       },
-      "System.IO/4.0.11-beta-23516": {
+      "System.IO/4.0.11-rc2-23623": {
         "type": "package",
         "dependencies": {
           "System.Runtime": "4.0.20",
@@ -11109,7 +11459,7 @@
           "lib/DNXCore50/System.Resources.ReaderWriter.dll": {}
         }
       },
-      "System.Resources.ResourceManager/4.0.1-beta-23516": {
+      "System.Resources.ResourceManager/4.0.1-rc2-23623": {
         "type": "package",
         "dependencies": {
           "System.Globalization": "4.0.0",
@@ -11540,6 +11890,26 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
+      },
+      "System.Xml.XPath/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XPath.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XPath.dll": {}
+        }
       }
     },
     "DNXCore,Version=v5.0/win7-x64": {
@@ -11755,18 +12125,45 @@
           "lib/dotnet5.4/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
+      "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc2-15922": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
-          "System.IO": "4.0.11-beta-23516",
-          "System.Resources.ResourceManager": "4.0.1-beta-23516"
+          "Microsoft.Extensions.Primitives": "1.0.0-rc2-15967",
+          "System.IO": "4.0.11-rc2-23623",
+          "System.Resources.ResourceManager": "4.0.1-rc2-23623"
         },
         "compile": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Composite/1.0.0-rc2-15922": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc2-15922"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Reflection": "4.0.10",
+          "System.Runtime.Extensions": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -13445,6 +13842,33 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         }
       },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        }
+      },
       "System.AppContext/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -13774,7 +14198,7 @@
           "ref/dotnet5.1/System.Globalization.Extensions.dll": {}
         }
       },
-      "System.IO/4.0.11-beta-23516": {
+      "System.IO/4.0.11-rc2-23623": {
         "type": "package",
         "dependencies": {
           "System.Runtime": "4.0.20",
@@ -14134,7 +14558,7 @@
           "lib/DNXCore50/System.Resources.ReaderWriter.dll": {}
         }
       },
-      "System.Resources.ResourceManager/4.0.1-beta-23516": {
+      "System.Resources.ResourceManager/4.0.1-rc2-23623": {
         "type": "package",
         "dependencies": {
           "System.Globalization": "4.0.0",
@@ -14565,6 +14989,26 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
+      },
+      "System.Xml.XPath/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XPath.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XPath.dll": {}
+        }
       }
     }
   },
@@ -14739,18 +15183,46 @@
         "Microsoft.AspNet.Diagnostics.Abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
+    "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc2-15922": {
       "type": "package",
       "serviceable": true,
-      "sha512": "Tv6YJk78cH+gFipRNjeMpzzUg3t4BQiS0xYVlv/8gVNl4sI6ytAMYYfIbx8pCacIRH5Nx/Tw9GVn28eyw+JZfA==",
+      "sha512": "N4rg+BS1OlPuYBxvdos1HQFjowdkEuNJ0Xedzc+dNYKLOpv/KOf7I4SRpcLkkKHYgFXGfZ6FiD+aLDVyVkFm9g==",
       "files": [
         "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll",
         "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.xml",
         "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.dll",
         "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.xml",
-        "Microsoft.AspNet.FileProviders.Abstractions.1.0.0-rc1-final.nupkg",
-        "Microsoft.AspNet.FileProviders.Abstractions.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.AspNet.FileProviders.Abstractions.1.0.0-rc2-15922.nupkg",
+        "Microsoft.AspNet.FileProviders.Abstractions.1.0.0-rc2-15922.nupkg.sha512",
         "Microsoft.AspNet.FileProviders.Abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.FileProviders.Composite/1.0.0-rc2-15922": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "+Mr9yK5+ub9Cjxt2s3dRbYM9EvP94s3OU6LSUVHnWzgfhp2Usnu0hdovMbpcAP3DqxzJ9kC9XdEaIZqSelx5yw==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Composite.xml",
+        "lib/net451/Microsoft.AspNet.FileProviders.Composite.dll",
+        "lib/net451/Microsoft.AspNet.FileProviders.Composite.xml",
+        "Microsoft.AspNet.FileProviders.Composite.1.0.0-rc2-15922.nupkg",
+        "Microsoft.AspNet.FileProviders.Composite.1.0.0-rc2-15922.nupkg.sha512",
+        "Microsoft.AspNet.FileProviders.Composite.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "MWMhV2n9CHQHIJpgGVCguXyeh+6c0GpABHH+Z12HY9nyNU56slop1KLa7eSN4Z6oojKm/eMoP79EIihj5GokDQ==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.xml",
+        "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll",
+        "lib/net451/Microsoft.AspNet.FileProviders.Embedded.xml",
+        "Microsoft.AspNet.FileProviders.Embedded.1.0.0-rc1-final.nupkg",
+        "Microsoft.AspNet.FileProviders.Embedded.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.AspNet.FileProviders.Embedded.nuspec"
       ]
     },
     "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -16318,6 +16790,32 @@
         "SimpleIdentityServer.UserInformation.Authentication.nuspec"
       ]
     },
+    "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+      "type": "package",
+      "sha512": "YfkBm+xYruoKJzVpaDFZQzwPF59CyrYe0d4bb3kKGeJ+vi20xYfzzk9j2PXZ/BiP8xJ59pkVrRUZOyeceP3eNQ==",
+      "files": [
+        "lib/dnx451/Swashbuckle.SwaggerGen.dll",
+        "lib/dnx451/Swashbuckle.SwaggerGen.xml",
+        "lib/dnxcore50/Swashbuckle.SwaggerGen.dll",
+        "lib/dnxcore50/Swashbuckle.SwaggerGen.xml",
+        "Swashbuckle.SwaggerGen.6.0.0-rc1-final.nupkg",
+        "Swashbuckle.SwaggerGen.6.0.0-rc1-final.nupkg.sha512",
+        "Swashbuckle.SwaggerGen.nuspec"
+      ]
+    },
+    "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+      "type": "package",
+      "sha512": "h/yK4Pq2SJNPwrWEVvP6UHnZBfi0MnesCa1ZgV5HKI/PRp1dq/BXPrAZi2VB1oz1PU+F0zsaVfZf31BTxg6NzA==",
+      "files": [
+        "lib/dnx451/Swashbuckle.SwaggerUi.dll",
+        "lib/dnx451/Swashbuckle.SwaggerUi.xml",
+        "lib/dnxcore50/Swashbuckle.SwaggerUi.dll",
+        "lib/dnxcore50/Swashbuckle.SwaggerUi.xml",
+        "Swashbuckle.SwaggerUi.6.0.0-rc1-final.nupkg",
+        "Swashbuckle.SwaggerUi.6.0.0-rc1-final.nupkg.sha512",
+        "Swashbuckle.SwaggerUi.nuspec"
+      ]
+    },
     "System.AppContext/4.0.1-beta-23516": {
       "type": "package",
       "serviceable": true,
@@ -17514,10 +18012,10 @@
         "System.IO.nuspec"
       ]
     },
-    "System.IO/4.0.11-beta-23516": {
+    "System.IO/4.0.11-rc2-23623": {
       "type": "package",
       "serviceable": true,
-      "sha512": "6nJmAk4vYjN+5/haenkKk/BDGCOKw5pk5EjXAOvBnUM5PFIfO8JwUxGbcveOD4vV5Vb6TAxrmRmts/7F+BEuEw==",
+      "sha512": "hJ9YH7zDBweFNRNMvkPkrQQRfCzobSgNf7cyq4FXivgbKgL5qUmJkwiTNRBYbUVymoD+9eloYHkG0J+Ucy0FUw==",
       "files": [
         "lib/DNXCore50/System.IO.dll",
         "lib/MonoAndroid10/_._",
@@ -17571,8 +18069,8 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "runtimes/win8-aot/lib/netcore50/System.IO.dll",
-        "System.IO.4.0.11-beta-23516.nupkg",
-        "System.IO.4.0.11-beta-23516.nupkg.sha512",
+        "System.IO.4.0.11-rc2-23623.nupkg",
+        "System.IO.4.0.11-rc2-23623.nupkg.sha512",
         "System.IO.nuspec"
       ]
     },
@@ -18560,17 +19058,21 @@
         "System.Resources.ResourceManager.nuspec"
       ]
     },
-    "System.Resources.ResourceManager/4.0.1-beta-23516": {
+    "System.Resources.ResourceManager/4.0.1-rc2-23623": {
       "type": "package",
       "serviceable": true,
-      "sha512": "KLzhgVk6aZDbU3jU+zGN3gGIU6hlhPyA8hwGqB1FmJRs/lJl7o9td34+5xm3Mk1va5vHEO8+cRj7te9WdNalHQ==",
+      "sha512": "1DpvBxKM8YjHrpYRTUww09odYfz4IVdHZ7QXx3Ro42g3Ao73pk24+cGGsXrsRYCZAS3diD4nYCsxjE2/ApiKiA==",
       "files": [
         "lib/DNXCore50/System.Resources.ResourceManager.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
         "lib/net45/_._",
         "lib/netcore50/System.Resources.ResourceManager.dll",
         "lib/win8/_._",
         "lib/wp80/_._",
         "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
         "ref/dotnet5.1/de/System.Resources.ResourceManager.xml",
         "ref/dotnet5.1/es/System.Resources.ResourceManager.xml",
         "ref/dotnet5.1/fr/System.Resources.ResourceManager.xml",
@@ -18582,6 +19084,8 @@
         "ref/dotnet5.1/System.Resources.ResourceManager.xml",
         "ref/dotnet5.1/zh-hans/System.Resources.ResourceManager.xml",
         "ref/dotnet5.1/zh-hant/System.Resources.ResourceManager.xml",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
         "ref/net45/_._",
         "ref/netcore50/de/System.Resources.ResourceManager.xml",
         "ref/netcore50/es/System.Resources.ResourceManager.xml",
@@ -18597,9 +19101,11 @@
         "ref/win8/_._",
         "ref/wp80/_._",
         "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
         "runtimes/win8-aot/lib/netcore50/System.Resources.ResourceManager.dll",
-        "System.Resources.ResourceManager.4.0.1-beta-23516.nupkg",
-        "System.Resources.ResourceManager.4.0.1-beta-23516.nupkg.sha512",
+        "System.Resources.ResourceManager.4.0.1-rc2-23623.nupkg",
+        "System.Resources.ResourceManager.4.0.1-rc2-23623.nupkg.sha512",
         "System.Resources.ResourceManager.nuspec"
       ]
     },
@@ -20052,10 +20558,45 @@
         "System.Xml.XDocument.4.0.11-beta-23516.nupkg.sha512",
         "System.Xml.XDocument.nuspec"
       ]
+    },
+    "System.Xml.XPath/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "jalVwhZSwErcW28NZOE3Dqb6B1XA4DAsL15JvykYIKXtXYQU8PI5GXssjF5G0bLm8/6Gko2e1SOjRs/MoeAKrw==",
+      "files": [
+        "lib/dotnet/System.Xml.XPath.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Xml.XPath.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/dotnet/de/System.Xml.XPath.xml",
+        "ref/dotnet/es/System.Xml.XPath.xml",
+        "ref/dotnet/fr/System.Xml.XPath.xml",
+        "ref/dotnet/it/System.Xml.XPath.xml",
+        "ref/dotnet/ja/System.Xml.XPath.xml",
+        "ref/dotnet/ko/System.Xml.XPath.xml",
+        "ref/dotnet/ru/System.Xml.XPath.xml",
+        "ref/dotnet/System.Xml.XPath.dll",
+        "ref/dotnet/System.Xml.XPath.xml",
+        "ref/dotnet/zh-hans/System.Xml.XPath.xml",
+        "ref/dotnet/zh-hant/System.Xml.XPath.xml",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Xml.XPath.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "System.Xml.XPath.4.0.0.nupkg",
+        "System.Xml.XPath.4.0.0.nupkg.sha512",
+        "System.Xml.XPath.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "": [
+      "Microsoft.AspNet.Diagnostics >= 1.0.0-rc1-final",
+      "Microsoft.AspNet.FileProviders.Composite >= 1.0.0-rc2-15922",
+      "Microsoft.AspNet.FileProviders.Embedded >= 1.0.0-rc1-final",
       "Microsoft.AspNet.IISPlatformHandler >= 1.0.0-rc1-final",
       "Microsoft.AspNet.Mvc >= 6.0.0-rc1-final",
       "Microsoft.AspNet.Mvc.TagHelpers >= 6.0.0-rc1-final",
@@ -20063,7 +20604,6 @@
       "Microsoft.AspNet.StaticFiles >= 1.0.0-rc1-final",
       "Microsoft.AspNet.Tooling.Razor >= 1.0.0-rc1-final",
       "Microsoft.Dnx.Runtime >= 1.0.0-rc1-final",
-      "Microsoft.Extensions.Primitives >= 1.0.0-rc1-final",
       "Microsoft.Dnx.Watcher >= 1.0.0-rc1-final",
       "Microsoft.Extensions.CodeGenerators.Mvc >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Configuration.FileProviderExtensions >= 1.0.0-rc1-final",
@@ -20072,8 +20612,10 @@
       "Microsoft.Extensions.Logging >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final",
-      "Microsoft.AspNet.Diagnostics >= 1.0.0-rc1-final",
-      "SimpleIdentityServer.UserInformation.Authentication >= 1.0.0-rc2-final"
+      "Microsoft.Extensions.Primitives >= 1.0.0-rc1-final",
+      "SimpleIdentityServer.UserInformation.Authentication >= 1.0.0-rc2-final",
+      "Swashbuckle.SwaggerGen >= 6.0.0-rc1-final",
+      "Swashbuckle.SwaggerUi >= 6.0.0-rc1-final"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
