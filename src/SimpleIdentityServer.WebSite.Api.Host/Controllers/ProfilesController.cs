@@ -14,22 +14,21 @@
 // limitations under the License.
 #endregion
 
-namespace SimpleIdentityServer.WebSite.Api.Host
+using Microsoft.AspNet.Mvc;
+
+namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
-    public static class Constants
+    [Route(Constants.RouteValues.Profile)]
+    public class ProfileController : Controller
     {
-        public static class RouteValues
+        #region Public methods
+        
+        [HttpGet(Constants.ProfileActions.CurrentProfile)]
+        public string GetCurrentProfile()
         {
-            public const string Root = "api";
-
-            public const string Docker = Root + "/dockers";
-
-            public const string Profile = Root + "/profiles";
+            return "test";
         }
 
-        public static class ProfileActions
-        {
-            public const string CurrentProfile = "current";
-        }
+        #endregion
     }
 }

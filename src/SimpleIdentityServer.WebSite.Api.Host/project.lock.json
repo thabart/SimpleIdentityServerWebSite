@@ -81,6 +81,30 @@
           "lib/net451/Microsoft.AspNet.Antiforgery.dll": {}
         }
       },
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Authentication.dll": {}
+        }
+      },
       "Microsoft.AspNet.Authorization/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -239,6 +263,24 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -1691,7 +1733,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -1707,6 +1749,91 @@
         },
         "runtime": {
           "lib/net45/Remotion.Linq.dll": {}
+        }
+      },
+      "SimpleIdentityServer.Authentication.Common/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Runtime.Serialization",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {}
+        }
+      },
+      "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2",
+          "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Runtime.Serialization",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.Collections/4.0.0": {
@@ -1922,6 +2049,15 @@
       }
     },
     "DNXCore,Version=v5.0": {
+      "CurlSharp/0.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/curl-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/curl-sharp.dll": {}
+        }
+      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -1984,6 +2120,24 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.Antiforgery.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc1-final",
+          "System.Net.Http": "4.0.1-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
         }
       },
       "Microsoft.AspNet.Authorization/1.0.0-rc1-final": {
@@ -2119,6 +2273,21 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Reflection": "4.0.10",
+          "System.Runtime.Extensions": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -3440,13 +3609,13 @@
           "lib/DNXCore50/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll": {}
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll": {}
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -3456,6 +3625,69 @@
         },
         "runtime": {
           "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll": {}
+        }
+      },
+      "SimpleIdentityServer.Authentication.Common/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2"
+        },
+        "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        }
+      },
+      "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "CurlSharp": "0.6.2",
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2",
+          "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
+        },
+        "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.AppContext/4.0.1-beta-23516": {
@@ -3833,6 +4065,19 @@
         },
         "runtime": {
           "lib/dotnet5.4/System.Linq.Queryable.dll": {}
+        }
+      },
+      "System.Net.Http/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Net.Primitives": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet5.2/System.Net.Http.dll": {}
         }
       },
       "System.Net.Primitives/4.0.11-beta-23516": {
@@ -4382,6 +4627,26 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
+      },
+      "System.Xml.XPath/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XPath.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XPath.dll": {}
+        }
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
@@ -4461,6 +4726,30 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNet.Antiforgery.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Authentication.dll": {}
         }
       },
       "Microsoft.AspNet.Authorization/1.0.0-rc1-final": {
@@ -4621,6 +4910,24 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -6076,7 +6383,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -6092,6 +6399,91 @@
         },
         "runtime": {
           "lib/net45/Remotion.Linq.dll": {}
+        }
+      },
+      "SimpleIdentityServer.Authentication.Common/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Runtime.Serialization",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {}
+        }
+      },
+      "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2",
+          "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Runtime.Serialization",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.Collections/4.0.0": {
@@ -6385,6 +6777,30 @@
           "lib/net451/Microsoft.AspNet.Antiforgery.dll": {}
         }
       },
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Authentication.dll": {}
+        }
+      },
       "Microsoft.AspNet.Authorization/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -6543,6 +6959,24 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -7998,7 +8432,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -8014,6 +8448,91 @@
         },
         "runtime": {
           "lib/net45/Remotion.Linq.dll": {}
+        }
+      },
+      "SimpleIdentityServer.Authentication.Common/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Runtime.Serialization",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {}
+        }
+      },
+      "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2",
+          "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Runtime.Serialization",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.Collections/4.0.0": {
@@ -8229,6 +8748,15 @@
       }
     },
     "DNXCore,Version=v5.0/win7-x86": {
+      "CurlSharp/0.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/curl-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/curl-sharp.dll": {}
+        }
+      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -8291,6 +8819,24 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.Antiforgery.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc1-final",
+          "System.Net.Http": "4.0.1-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
         }
       },
       "Microsoft.AspNet.Authorization/1.0.0-rc1-final": {
@@ -8426,6 +8972,21 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Reflection": "4.0.10",
+          "System.Runtime.Extensions": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -9750,13 +10311,13 @@
           "lib/DNXCore50/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll": {}
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll": {}
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -9933,6 +10494,33 @@
           "runtimes/win7/lib/dotnet5.4/System.IO.FileSystem.Watcher.dll": {}
         }
       },
+      "runtime.win7.System.Net.Http/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Primitives": "4.0.0",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.IO.Compression": "4.0.0",
+          "System.Net.Primitives": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Handles": "4.0.0",
+          "System.Runtime.InteropServices": "4.0.20",
+          "System.Security.Cryptography.X509Certificates": "4.0.0-beta-23516",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.0",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "runtimes/win7/lib/DNXCore50/System.Net.Http.dll": {}
+        }
+      },
       "runtime.win7.System.Net.Primitives/4.0.11-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -10039,6 +10627,69 @@
         },
         "runtime": {
           "runtimes/win7/lib/DNXCore50/System.Threading.dll": {}
+        }
+      },
+      "SimpleIdentityServer.Authentication.Common/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2"
+        },
+        "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        }
+      },
+      "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "CurlSharp": "0.6.2",
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2",
+          "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
+        },
+        "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.AppContext/4.0.1-beta-23516": {
@@ -10384,6 +11035,26 @@
           "lib/DNXCore50/System.IO.dll": {}
         }
       },
+      "System.IO.Compression/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.0",
+          "System.IO": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Extensions": "4.0.0",
+          "System.Runtime.InteropServices": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.IO.Compression.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.IO.Compression.dll": {}
+        }
+      },
       "System.IO.FileSystem/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -10461,6 +11132,19 @@
         },
         "runtime": {
           "lib/dotnet5.4/System.Linq.Queryable.dll": {}
+        }
+      },
+      "System.Net.Http/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Net.Primitives": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet5.2/System.Net.Http.dll": {}
         }
       },
       "System.Net.Primitives/4.0.11-beta-23516": {
@@ -11128,9 +11812,38 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
+      },
+      "System.Xml.XPath/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XPath.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XPath.dll": {}
+        }
       }
     },
     "DNXCore,Version=v5.0/win7-x64": {
+      "CurlSharp/0.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/dnxcore50/curl-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/curl-sharp.dll": {}
+        }
+      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -11193,6 +11906,24 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.Antiforgery.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc1-final",
+          "System.Net.Http": "4.0.1-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
         }
       },
       "Microsoft.AspNet.Authorization/1.0.0-rc1-final": {
@@ -11328,6 +12059,21 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Reflection": "4.0.10",
+          "System.Runtime.Extensions": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -12652,13 +13398,13 @@
           "lib/DNXCore50/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll": {}
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll": {}
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -12835,6 +13581,33 @@
           "runtimes/win7/lib/dotnet5.4/System.IO.FileSystem.Watcher.dll": {}
         }
       },
+      "runtime.win7.System.Net.Http/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Primitives": "4.0.0",
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.IO.Compression": "4.0.0",
+          "System.Net.Primitives": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Runtime.Handles": "4.0.0",
+          "System.Runtime.InteropServices": "4.0.20",
+          "System.Security.Cryptography.X509Certificates": "4.0.0-beta-23516",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.0",
+          "System.Threading.Tasks": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "runtimes/win7/lib/DNXCore50/System.Net.Http.dll": {}
+        }
+      },
       "runtime.win7.System.Net.Primitives/4.0.11-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -12941,6 +13714,69 @@
         },
         "runtime": {
           "runtimes/win7/lib/DNXCore50/System.Threading.dll": {}
+        }
+      },
+      "SimpleIdentityServer.Authentication.Common/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2"
+        },
+        "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        }
+      },
+      "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "CurlSharp": "0.6.2",
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.2",
+          "SimpleIdentityServer.Authentication.Common": "1.0.0-rc2-final"
+        },
+        "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
+          "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.FileProviders.Embedded": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+        },
+        "compile": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.AppContext/4.0.1-beta-23516": {
@@ -13286,6 +14122,26 @@
           "lib/DNXCore50/System.IO.dll": {}
         }
       },
+      "System.IO.Compression/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.0",
+          "System.IO": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Runtime.Extensions": "4.0.0",
+          "System.Runtime.InteropServices": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.IO.Compression.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.IO.Compression.dll": {}
+        }
+      },
       "System.IO.FileSystem/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -13363,6 +14219,19 @@
         },
         "runtime": {
           "lib/dotnet5.4/System.Linq.Queryable.dll": {}
+        }
+      },
+      "System.Net.Http/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.0",
+          "System.Net.Primitives": "4.0.0",
+          "System.Runtime": "4.0.0",
+          "System.Text.Encoding": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet5.2/System.Net.Http.dll": {}
         }
       },
       "System.Net.Primitives/4.0.11-beta-23516": {
@@ -14030,10 +14899,41 @@
         "runtime": {
           "lib/dotnet5.4/System.Xml.XDocument.dll": {}
         }
+      },
+      "System.Xml.XPath/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet/System.Xml.XPath.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Xml.XPath.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "CurlSharp/0.6.2": {
+      "type": "package",
+      "sha512": "HO0IHXWHKj8omf7VANyQQx2QUM9VsfatwqQuxbWhixNhFtuFf1goV+CKkjuqHCtyXKIvyl+aNpB0Ylz5PIx/Tw==",
+      "files": [
+        "CurlSharp.0.6.2.nupkg",
+        "CurlSharp.0.6.2.nupkg.sha512",
+        "CurlSharp.nuspec",
+        "lib/dnxcore50/curl-sharp.dll",
+        "lib/dnxcore50/curl-sharp.xml"
+      ]
+    },
     "EntityFramework.Core/7.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -14079,6 +14979,20 @@
         "Microsoft.AspNet.Antiforgery.1.0.0-rc1-final.nupkg",
         "Microsoft.AspNet.Antiforgery.1.0.0-rc1-final.nupkg.sha512",
         "Microsoft.AspNet.Antiforgery.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sdFCeQlwkJXZ1KHsRvf7ewNEWkEeKYNpcEKKC0D+WNUvLliziLc7cMH+6sjNmTU3FgGjGrSk4WjGQMhsOHCrDQ==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.Authentication.xml",
+        "lib/net451/Microsoft.AspNet.Authentication.dll",
+        "lib/net451/Microsoft.AspNet.Authentication.xml",
+        "Microsoft.AspNet.Authentication.1.0.0-rc1-final.nupkg",
+        "Microsoft.AspNet.Authentication.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.AspNet.Authentication.nuspec"
       ]
     },
     "Microsoft.AspNet.Authorization/1.0.0-rc1-final": {
@@ -14191,6 +15105,20 @@
         "Microsoft.AspNet.FileProviders.Abstractions.1.0.0-rc1-final.nupkg",
         "Microsoft.AspNet.FileProviders.Abstractions.1.0.0-rc1-final.nupkg.sha512",
         "Microsoft.AspNet.FileProviders.Abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.FileProviders.Embedded/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "MWMhV2n9CHQHIJpgGVCguXyeh+6c0GpABHH+Z12HY9nyNU56slop1KLa7eSN4Z6oojKm/eMoP79EIihj5GokDQ==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.FileProviders.Embedded.xml",
+        "lib/net451/Microsoft.AspNet.FileProviders.Embedded.dll",
+        "lib/net451/Microsoft.AspNet.FileProviders.Embedded.xml",
+        "Microsoft.AspNet.FileProviders.Embedded.1.0.0-rc1-final.nupkg",
+        "Microsoft.AspNet.FileProviders.Embedded.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.AspNet.FileProviders.Embedded.nuspec"
       ]
     },
     "Microsoft.AspNet.FileProviders.Physical/1.0.0-rc1-final": {
@@ -15451,9 +16379,9 @@
         "ref/net46/Microsoft.Win32.Registry.dll"
       ]
     },
-    "Newtonsoft.Json/6.0.6": {
+    "Newtonsoft.Json/8.0.2": {
       "type": "package",
-      "sha512": "w26uZNyCG5VeoKiEOJ4+9/o8koSofLKwHl7WLreIcp0U6r57L7WiRXmjp8MTKFw6dYNZ9AE0lw69WYbIhUsU9Q==",
+      "sha512": "e5yWmEfu68rmtG431zl9N/7PlNKQDIuiDW5MHlEFAZcecakcxrIGnKqrPAtWNILzK2oNanRB5cD150MYhECK3g==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -15463,14 +16391,12 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
-        "lib/netcore45/Newtonsoft.Json.dll",
-        "lib/netcore45/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.6.0.6.nupkg",
-        "Newtonsoft.Json.6.0.6.nupkg.sha512",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.8.0.2.nupkg",
+        "Newtonsoft.Json.8.0.2.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
       ]
@@ -15622,6 +16548,19 @@
         "runtimes/win7/lib/wpa81/_._"
       ]
     },
+    "runtime.win7.System.Net.Http/4.0.1-beta-23516": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "bY3pjffny1gN59HKE+5LKlrMN1QTj+BvIALy3emNQQaCfqf43BPhjbf1i30tIPst8HfvwFTnwcGMz03d7sK/jg==",
+      "files": [
+        "ref/dotnet/_._",
+        "runtime.win7.System.Net.Http.4.0.1-beta-23516.nupkg",
+        "runtime.win7.System.Net.Http.4.0.1-beta-23516.nupkg.sha512",
+        "runtime.win7.System.Net.Http.nuspec",
+        "runtimes/win7/lib/DNXCore50/System.Net.Http.dll",
+        "runtimes/win7/lib/netcore50/System.Net.Http.dll"
+      ]
+    },
     "runtime.win7.System.Net.Primitives/4.0.11-beta-23516": {
       "type": "package",
       "serviceable": true,
@@ -15715,6 +16654,62 @@
         "runtimes/win7/lib/DNXCore50/System.Threading.dll",
         "runtimes/win7/lib/netcore50/System.Threading.dll",
         "runtimes/win8-aot/lib/netcore50/System.Threading.dll"
+      ]
+    },
+    "SimpleIdentityServer.Authentication.Common/1.0.0-rc2-final": {
+      "type": "package",
+      "sha512": "xZxXQaxyhcvozq5LfecOOuQC8fBHkBUy9BVXkXtX7Jty8dRxZSeaDA/J+WbDci12W+fJuqLYS59xbkTB36g4dA==",
+      "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
+        "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll",
+        "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.xml",
+        "SimpleIdentityServer.Authentication.Common.1.0.0-rc2-final.nupkg",
+        "SimpleIdentityServer.Authentication.Common.1.0.0-rc2-final.nupkg.sha512",
+        "SimpleIdentityServer.Authentication.Common.nuspec"
+      ]
+    },
+    "SimpleIdentityServer.UserInformation.Authentication/1.0.0-rc2-final": {
+      "type": "package",
+      "sha512": "rW5tbue6WOUX2pZM8GBsVO4PzX5kiPSI75Aq022+bWbIKFlkG8Cxju1i+8tSPE8Gvkui8wlsJl33gaEJCnTuCQ==",
+      "files": [
+        "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
+        "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll",
+        "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll",
+        "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.xml",
+        "SimpleIdentityServer.UserInformation.Authentication.1.0.0-rc2-final.nupkg",
+        "SimpleIdentityServer.UserInformation.Authentication.1.0.0-rc2-final.nupkg.sha512",
+        "SimpleIdentityServer.UserInformation.Authentication.nuspec"
+      ]
+    },
+    "Swashbuckle.SwaggerGen/6.0.0-rc1-final": {
+      "type": "package",
+      "sha512": "YfkBm+xYruoKJzVpaDFZQzwPF59CyrYe0d4bb3kKGeJ+vi20xYfzzk9j2PXZ/BiP8xJ59pkVrRUZOyeceP3eNQ==",
+      "files": [
+        "lib/dnx451/Swashbuckle.SwaggerGen.dll",
+        "lib/dnx451/Swashbuckle.SwaggerGen.xml",
+        "lib/dnxcore50/Swashbuckle.SwaggerGen.dll",
+        "lib/dnxcore50/Swashbuckle.SwaggerGen.xml",
+        "Swashbuckle.SwaggerGen.6.0.0-rc1-final.nupkg",
+        "Swashbuckle.SwaggerGen.6.0.0-rc1-final.nupkg.sha512",
+        "Swashbuckle.SwaggerGen.nuspec"
+      ]
+    },
+    "Swashbuckle.SwaggerUi/6.0.0-rc1-final": {
+      "type": "package",
+      "sha512": "h/yK4Pq2SJNPwrWEVvP6UHnZBfi0MnesCa1ZgV5HKI/PRp1dq/BXPrAZi2VB1oz1PU+F0zsaVfZf31BTxg6NzA==",
+      "files": [
+        "lib/dnx451/Swashbuckle.SwaggerUi.dll",
+        "lib/dnx451/Swashbuckle.SwaggerUi.xml",
+        "lib/dnxcore50/Swashbuckle.SwaggerUi.dll",
+        "lib/dnxcore50/Swashbuckle.SwaggerUi.xml",
+        "Swashbuckle.SwaggerUi.6.0.0-rc1-final.nupkg",
+        "Swashbuckle.SwaggerUi.6.0.0-rc1-final.nupkg.sha512",
+        "Swashbuckle.SwaggerUi.nuspec"
       ]
     },
     "System.AppContext/4.0.1-beta-23516": {
@@ -16975,6 +17970,46 @@
         "System.IO.nuspec"
       ]
     },
+    "System.IO.Compression/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "S+ljBE3py8pujTrsOOYHtDg2cnAifn6kBu/pfh1hMWIXd8DoVh0ADTA6Puv4q+nYj+Msm6JoFLNwuRSmztbsDQ==",
+      "files": [
+        "lib/dotnet/System.IO.Compression.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.IO.Compression.dll",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/dotnet/de/System.IO.Compression.xml",
+        "ref/dotnet/es/System.IO.Compression.xml",
+        "ref/dotnet/fr/System.IO.Compression.xml",
+        "ref/dotnet/it/System.IO.Compression.xml",
+        "ref/dotnet/ja/System.IO.Compression.xml",
+        "ref/dotnet/ko/System.IO.Compression.xml",
+        "ref/dotnet/ru/System.IO.Compression.xml",
+        "ref/dotnet/System.IO.Compression.dll",
+        "ref/dotnet/System.IO.Compression.xml",
+        "ref/dotnet/zh-hans/System.IO.Compression.xml",
+        "ref/dotnet/zh-hant/System.IO.Compression.xml",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.IO.Compression.dll",
+        "ref/netcore50/System.IO.Compression.xml",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "runtime.json",
+        "System.IO.Compression.4.0.0.nupkg",
+        "System.IO.Compression.4.0.0.nupkg.sha512",
+        "System.IO.Compression.nuspec"
+      ]
+    },
     "System.IO.FileSystem/4.0.1-beta-23516": {
       "type": "package",
       "serviceable": true,
@@ -17246,6 +18281,45 @@
         "System.Linq.Queryable.4.0.1-beta-23516.nupkg",
         "System.Linq.Queryable.4.0.1-beta-23516.nupkg.sha512",
         "System.Linq.Queryable.nuspec"
+      ]
+    },
+    "System.Net.Http/4.0.1-beta-23516": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "A0S7LiARhMNbZTzO+1hMlkWrWJ+KnEBUQbfTOP9QoYdzCmc5vmXsJMEBYudhaKg7T+fpq1xmBzjU8x8rOB2zMA==",
+      "files": [
+        "lib/net45/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "ref/dotnet5.2/de/System.Net.Http.xml",
+        "ref/dotnet5.2/es/System.Net.Http.xml",
+        "ref/dotnet5.2/fr/System.Net.Http.xml",
+        "ref/dotnet5.2/it/System.Net.Http.xml",
+        "ref/dotnet5.2/ja/System.Net.Http.xml",
+        "ref/dotnet5.2/ko/System.Net.Http.xml",
+        "ref/dotnet5.2/ru/System.Net.Http.xml",
+        "ref/dotnet5.2/System.Net.Http.dll",
+        "ref/dotnet5.2/System.Net.Http.xml",
+        "ref/dotnet5.2/zh-hans/System.Net.Http.xml",
+        "ref/dotnet5.2/zh-hant/System.Net.Http.xml",
+        "ref/net45/_._",
+        "ref/netcore50/de/System.Net.Http.xml",
+        "ref/netcore50/es/System.Net.Http.xml",
+        "ref/netcore50/fr/System.Net.Http.xml",
+        "ref/netcore50/it/System.Net.Http.xml",
+        "ref/netcore50/ja/System.Net.Http.xml",
+        "ref/netcore50/ko/System.Net.Http.xml",
+        "ref/netcore50/ru/System.Net.Http.xml",
+        "ref/netcore50/System.Net.Http.dll",
+        "ref/netcore50/System.Net.Http.xml",
+        "ref/netcore50/zh-hans/System.Net.Http.xml",
+        "ref/netcore50/zh-hant/System.Net.Http.xml",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "runtime.json",
+        "System.Net.Http.4.0.1-beta-23516.nupkg",
+        "System.Net.Http.4.0.1-beta-23516.nupkg.sha512",
+        "System.Net.Http.nuspec"
       ]
     },
     "System.Net.Primitives/4.0.11-beta-23516": {
@@ -19372,6 +20446,38 @@
         "System.Xml.XDocument.4.0.11-beta-23516.nupkg.sha512",
         "System.Xml.XDocument.nuspec"
       ]
+    },
+    "System.Xml.XPath/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "jalVwhZSwErcW28NZOE3Dqb6B1XA4DAsL15JvykYIKXtXYQU8PI5GXssjF5G0bLm8/6Gko2e1SOjRs/MoeAKrw==",
+      "files": [
+        "lib/dotnet/System.Xml.XPath.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Xml.XPath.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/dotnet/de/System.Xml.XPath.xml",
+        "ref/dotnet/es/System.Xml.XPath.xml",
+        "ref/dotnet/fr/System.Xml.XPath.xml",
+        "ref/dotnet/it/System.Xml.XPath.xml",
+        "ref/dotnet/ja/System.Xml.XPath.xml",
+        "ref/dotnet/ko/System.Xml.XPath.xml",
+        "ref/dotnet/ru/System.Xml.XPath.xml",
+        "ref/dotnet/System.Xml.XPath.dll",
+        "ref/dotnet/System.Xml.XPath.xml",
+        "ref/dotnet/zh-hans/System.Xml.XPath.xml",
+        "ref/dotnet/zh-hant/System.Xml.XPath.xml",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Xml.XPath.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "System.Xml.XPath.4.0.0.nupkg",
+        "System.Xml.XPath.4.0.0.nupkg.sha512",
+        "System.Xml.XPath.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -19392,7 +20498,10 @@
       "Microsoft.Extensions.Logging >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final",
-      "Microsoft.AspNet.Diagnostics >= 1.0.0-rc1-final"
+      "Microsoft.AspNet.Diagnostics >= 1.0.0-rc1-final",
+      "SimpleIdentityServer.UserInformation.Authentication >= 1.0.0-rc2-final",
+      "Swashbuckle.SwaggerGen >= 6.0.0-rc1-final",
+      "Swashbuckle.SwaggerUi >= 6.0.0-rc1-final"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
