@@ -14,29 +14,19 @@
 // limitations under the License.
 #endregion
 
-namespace SimpleIdentityServer.WebSite.Api.Host
+using Microsoft.AspNet.Builder;
+
+namespace SimpleIdentityServer.WebSite.Api.Host.Middlewares
 {
-    public static class Constants
+    internal static class ExceptionHandlerExtension
     {
-        public static class RouteValues
+        #region Public static methods
+
+        public static IApplicationBuilder UseExceptionHandler(this IApplicationBuilder applicationBuilder)
         {
-            public const string Root = "api";
-
-            public const string Docker = Root + "/dockers";
-
-            public const string Profile = Root + "/profiles";
+            return applicationBuilder.UseMiddleware<ExceptionHandlerMiddleware>();
         }
 
-        public static class ProfileActions
-        {
-            public const string CurrentProfile = "current";
-        }
-
-        public static class ErrorResponseNames
-        {
-            public const string Error = "error";
-
-            public const string ErrorDescription = "error_description";
-        }
+        #endregion
     }
 }

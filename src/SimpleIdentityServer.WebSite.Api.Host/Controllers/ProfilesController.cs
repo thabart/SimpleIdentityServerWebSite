@@ -18,6 +18,7 @@ using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles;
 using System.Security.Claims;
+using System.Linq;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
@@ -48,8 +49,8 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
             }
 
 
-            var name = User.Identity.Name;
-            return name;
+            var result = claimsIdentity.Claims.First(c => c.Type == "sub").Value;
+            return result;
         }
 
         #endregion

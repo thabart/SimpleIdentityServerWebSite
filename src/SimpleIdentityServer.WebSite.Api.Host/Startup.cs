@@ -24,6 +24,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using SimpleIdentityServer.UserInformation.Authentication;
 using SimpleIdentityServer.WebSite.Api.Core;
+using SimpleIdentityServer.WebSite.Api.Host.Middlewares;
 using SimpleIdentityServer.WebSite.Api.Host.Swagger;
 using Swashbuckle.SwaggerGen;
 using System.Collections.Generic;
@@ -130,6 +131,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             });
 
             services.AddMvc();
+            RegisterDependencies(services);
         }
 
         public void Configure(IApplicationBuilder app,
@@ -142,6 +144,8 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             app.UseCors("AllowAll");
 
             app.UseStatusCodePages();
+
+            app.UseExceptionHandler();
 
             var userInformationOptions = new UserInformationOptions
             {

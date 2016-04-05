@@ -14,29 +14,17 @@
 // limitations under the License.
 #endregion
 
-namespace SimpleIdentityServer.WebSite.Api.Host
+using System.Runtime.Serialization;
+
+namespace SimpleIdentityServer.WebSite.Api.Host.DTOs.Responses
 {
-    public static class Constants
+    [DataContract]
+    public class ErrorResponse
     {
-        public static class RouteValues
-        {
-            public const string Root = "api";
+        [DataMember(Name = Constants.ErrorResponseNames.Error)]
+        public string Error { get; set; }
 
-            public const string Docker = Root + "/dockers";
-
-            public const string Profile = Root + "/profiles";
-        }
-
-        public static class ProfileActions
-        {
-            public const string CurrentProfile = "current";
-        }
-
-        public static class ErrorResponseNames
-        {
-            public const string Error = "error";
-
-            public const string ErrorDescription = "error_description";
-        }
+        [DataMember(Name = Constants.ErrorResponseNames.ErrorDescription)]
+        public string ErrorDescription { get; set; }
     }
 }
