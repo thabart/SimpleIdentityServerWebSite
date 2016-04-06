@@ -64,7 +64,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Middlewares
 
                 var code = identityServerException.Code;
                 var message = identityServerException.Message;
-                context.Response.Clear();
+                // context.Response.Clear();
                 var error = new ErrorResponse();
                 PopulateError(error, identityServerException);
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;

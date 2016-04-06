@@ -93,10 +93,6 @@ namespace SimpleIdentityServer.WebSite.Api.Host
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader()));
-
             services.AddLogging();
 
             services.AddSwaggerGen();
@@ -136,6 +132,11 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             });
 
             services.AddMvc();
+
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader()));
+
             RegisterDependencies(services);
         }
 
@@ -146,7 +147,6 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             var userInformationUrl = Configuration["UserInfoUrl"];
 
             loggerFactory.AddConsole();
-            app.UseCors("AllowAll");
 
             app.UseStatusCodePages();
 
@@ -157,6 +157,8 @@ namespace SimpleIdentityServer.WebSite.Api.Host
                 UserInformationEndPoint = userInformationUrl
             };
             app.UseAuthenticationWithUserInformation(userInformationOptions);
+
+            app.UseCors("AllowAll");
 
             app.UseMvc(routes =>
             {
