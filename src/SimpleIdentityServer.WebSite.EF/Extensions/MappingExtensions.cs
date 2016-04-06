@@ -21,6 +21,24 @@ namespace SimpleIdentityServer.WebSite.EF.Extensions
 {
     internal static class MappingExtensions
     {
+        #region To Model
+
+        public static Model.Profile ToModel(this Domain.Profile profile)
+        {
+            return new Model.Profile
+            {
+                AuthorizationServerUrl = profile.AuthorizationServerUrl,
+                Name = profile.Name,
+                IsActive = profile.IsActive,
+                ManagerWebSiteApiUrl = profile.ManagerWebSiteApiUrl,
+                ManagerWebSiteUrl = profile.ManagerWebSiteUrl,
+                Picture = profile.Picture,
+                Subject = profile.Subject
+            };
+        }
+
+        #endregion
+
         #region To Domain
 
         public static Domain.Profile ToDomain(this Model.Profile profile)
@@ -28,6 +46,7 @@ namespace SimpleIdentityServer.WebSite.EF.Extensions
             return new Domain.Profile
             {
                 AuthorizationServerUrl = profile.AuthorizationServerUrl,
+                Name = profile.Name,
                 IsActive = profile.IsActive,
                 ManagerWebSiteApiUrl = profile.ManagerWebSiteApiUrl,
                 ManagerWebSiteUrl = profile.ManagerWebSiteUrl,

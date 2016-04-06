@@ -49,7 +49,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Tests.Controllers.Profiles.Actio
             // ARRANGE
             const string subject = "subject";
             InitializeFakeObjects();
-            _profileRepositoryStub.Setup(p => p.GetProfile(It.IsAny<string>()))
+            _profileRepositoryStub.Setup(p => p.GetProfileBySubject(It.IsAny<string>()))
                 .Returns(() => null);
 
             // ACT & ASSERT
@@ -65,7 +65,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Tests.Controllers.Profiles.Actio
             // ARRANGE
             const string subject = "subject";
             InitializeFakeObjects();
-            _profileRepositoryStub.Setup(p => p.GetProfile(It.IsAny<string>()))
+            _profileRepositoryStub.Setup(p => p.GetProfileBySubject(It.IsAny<string>()))
                 .Returns(new Profile
                 {
                     IsActive = false
@@ -93,7 +93,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Tests.Controllers.Profiles.Actio
                 AuthorizationServerUrl = "authorization_server_url"
             };
             InitializeFakeObjects();
-            _profileRepositoryStub.Setup(p => p.GetProfile(It.IsAny<string>()))
+            _profileRepositoryStub.Setup(p => p.GetProfileBySubject(It.IsAny<string>()))
                 .Returns(profile);
 
             // ACT

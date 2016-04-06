@@ -21,5 +21,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Errors
         public const string TheProfileDoesntExist = "the profile {0} doesn't exist";
 
         public const string TheProfileIsNotActive = "the profile {0} is not active";
+
+        public const string TheProfileAlreadyExists = "the profile already exists";
     }
 }

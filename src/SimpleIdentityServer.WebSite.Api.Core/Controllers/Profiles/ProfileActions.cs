@@ -16,23 +16,31 @@
 
 using SimpleIdentityServer.WebSite.Api.Core.Models;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles.Actions;
+using SimpleIdentityServer.WebSite.Api.Core.Parameters;
 
 namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles
 {
     public interface IProfileActions
     {
         Profile GetCurrentProfile(string subject);
+
+        Profile AddProfile(AddProfileParameter addProfileParameter);
     }
 
     public class ProfileActions : IProfileActions
     {
         private readonly IGetCurrentProfileAction _getCurrentProfileAction;
 
+        private readonly IAddProfileAction _addProfileAction;
+
         #region Constructor
 
-        public ProfileActions(IGetCurrentProfileAction getCurrentProfileAction)
+        public ProfileActions(
+            IGetCurrentProfileAction getCurrentProfileAction,
+            IAddProfileAction addProfileAction)
         {
             _getCurrentProfileAction = getCurrentProfileAction;
+            _addProfileAction = addProfileAction;
         }
 
         #endregion
@@ -42,6 +50,11 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles
         public Profile GetCurrentProfile(string subject)
         {
             return _getCurrentProfileAction.Execute(subject);
+        }
+
+        public Profile AddProfile(AddProfileParameter addProfileParameter)
+        {
+            return _addProfileAction.Execute(addProfileParameter);
         }
 
         #endregion

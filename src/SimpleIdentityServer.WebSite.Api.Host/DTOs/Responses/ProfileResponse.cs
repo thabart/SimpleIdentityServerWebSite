@@ -24,6 +24,9 @@ namespace SimpleIdentityServer.WebSite.Api.Host.DTOs.Responses
         [DataMember(Name = Constants.ProfileResponseNames.Subject)]
         public string Subject { get; set; }
 
+        [DataMember(Name = Constants.ProfileResponseNames.Name)]
+        public string Name { get; set; }
+
         [DataMember(Name = Constants.ProfileResponseNames.Picture)]
         public string Picture { get; set; }
 

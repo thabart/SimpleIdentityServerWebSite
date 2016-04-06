@@ -24,6 +24,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using SimpleIdentityServer.UserInformation.Authentication;
 using SimpleIdentityServer.WebSite.Api.Core;
+using SimpleIdentityServer.WebSite.Api.Core.Configuration;
+using SimpleIdentityServer.WebSite.Api.Host.Configuration;
 using SimpleIdentityServer.WebSite.Api.Host.Middlewares;
 using SimpleIdentityServer.WebSite.Api.Host.Swagger;
 using SimpleIdentityServer.WebSite.EF;
@@ -192,6 +194,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host
         private void RegisterDependencies(IServiceCollection services)
         {
             services.AddSimpleIdentityServerWebSite();
+            services.AddTransient<IEndPointConfiguration, EndPointConfiguration>();
             services.AddSimpleIdentityServerEf(_simpleIdentityServerOptions.ConnectionString);
         }
 

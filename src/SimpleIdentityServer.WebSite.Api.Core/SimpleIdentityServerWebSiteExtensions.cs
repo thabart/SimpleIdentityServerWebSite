@@ -32,6 +32,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core
 
             serviceCollection.AddTransient<IProfileActions, ProfileActions>();
             serviceCollection.AddTransient<IGetCurrentProfileAction, GetCurrentProfileAction>();
+            serviceCollection.AddTransient<IAddProfileAction, AddProfileAction>();
 
             return serviceCollection;
         }

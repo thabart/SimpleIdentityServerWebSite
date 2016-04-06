@@ -43,6 +43,8 @@ namespace SimpleIdentityServer.WebSite.Api.Host
         {
             public const string Subject = "subject";
 
+            public const string Name = "name";
+
             public const string Picture = "picture";
 
             public const string AuthorizationServerUrl = "authorization_server";
@@ -52,6 +54,13 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             public const string ManagerWebSiteApiUrl = "manager_website_api";
 
             public const string IsActive = "is_active";
+        }
+
+        public static class PostProfileRequestNames
+        {
+            public const string Subject = "subject";
+
+            public const string Name = "name";
         }
 
         public static class ClaimNames

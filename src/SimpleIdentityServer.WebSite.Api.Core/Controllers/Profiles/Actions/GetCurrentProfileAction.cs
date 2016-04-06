@@ -49,7 +49,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles.Actions
                 throw new ArgumentNullException(nameof(subject));
             }
 
-            var profile = _profileRepository.GetProfile(subject);
+            var profile = _profileRepository.GetProfileBySubject(subject);
             if (profile == null)
             {
                 throw new IdentityServerException(ErrorCodes.LoginRequiredCode,

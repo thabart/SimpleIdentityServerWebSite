@@ -20,6 +20,8 @@ namespace SimpleIdentityServer.WebSite.EF.Models
     {
         public string Subject { get; set; }
 
+        public string Name { get; set; }
+
         public string Picture { get; set; }
 
         public string AuthorizationServerUrl { get; set; }

@@ -2498,7 +2498,7 @@
     },
     "System.Threading.Tasks/4.0.0": {
       "type": "package",
-      "sha512": "RUCOogCWg11ARw6BMNq9gWmgHF65LHyf1ah0IkpT+O0BybAPP8la/UXkNclaw5pJBBmuyUf3edlKHcoMojmjug==",
+      "sha512": "dA3y1B6Pc8mNt9obhEWWGGpvEakS51+nafXpmM/Z8IF847GErLXGTjdfA+AYEKszfFbH7SVLWUklXhYeeSQ1lw==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",

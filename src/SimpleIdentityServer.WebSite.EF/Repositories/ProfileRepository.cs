@@ -14,6 +14,7 @@
 // limitations under the License.
 #endregion
 
+using System;
 using System.Linq;
 using SimpleIdentityServer.WebSite.Api.Core.Models;
 using SimpleIdentityServer.WebSite.Api.Core.Repositories;
@@ -36,7 +37,7 @@ namespace SimpleIdentityServer.WebSite.EF.Repositories
 
         #region Public methods
 
-        public Profile GetProfile(string subject)
+        public Profile GetProfileBySubject(string subject)
         {
             var record = _simpleIdentityServerWebSiteContext.Profiles.FirstOrDefault(p => p.Subject == subject);
             if (record == null)
@@ -45,6 +46,38 @@ namespace SimpleIdentityServer.WebSite.EF.Repositories
             }
 
             return record.ToDomain();
+        }
+
+        public Profile GetProfileByName(string name)
+        {
+            var record = _simpleIdentityServerWebSiteContext.Profiles.FirstOrDefault(p => p.Name == name);
+            if (record == null)
+            {
+                return null;
+            }
+
+            return record.ToDomain();
+        }
+
+        public bool AddProfile(Profile profile)
+        {
+            if (profile == null)
+            {
+                throw new ArgumentNullException(nameof(profile));
+            }
+
+            try
+            {
+                var record = profile.ToModel();
+                _simpleIdentityServerWebSiteContext.Profiles.Add(record);
+                _simpleIdentityServerWebSiteContext.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
 
         #endregion

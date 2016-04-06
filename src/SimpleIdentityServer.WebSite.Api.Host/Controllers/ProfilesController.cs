@@ -18,9 +18,12 @@ using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles;
 using SimpleIdentityServer.WebSite.Api.Core.Exceptions;
+using SimpleIdentityServer.WebSite.Api.Host.DTOs.Requests;
 using SimpleIdentityServer.WebSite.Api.Host.DTOs.Responses;
 using SimpleIdentityServer.WebSite.Api.Host.Errors;
 using SimpleIdentityServer.WebSite.Api.Host.Extensions;
+using System;
+using System.Net;
 using System.Security.Claims;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
@@ -62,6 +65,25 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
             return _profileActions
                 .GetCurrentProfile(subject)
                 .ToResponse();
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ProfileResponse PostProfile([FromBody] PostProfileRequest postProfileRequest)
+        {
+            if (postProfileRequest == null)
+            {
+                throw new ArgumentNullException(nameof(postProfileRequest));
+            }
+
+            var profile = _profileActions.AddProfile(postProfileRequest.ToParameter());
+            if (profile == null)
+            {
+                Response.StatusCode = (int)HttpStatusCode.NoContent;
+                return null;
+            }
+
+            return profile.ToResponse();
         }
 
         #endregion

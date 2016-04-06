@@ -19,5 +19,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Errors
     public static class ErrorCodes
     {
         public const string LoginRequiredCode = "login_required";
+
+        public const string InvalidRequestCode = "invalid_request";
     }
 }

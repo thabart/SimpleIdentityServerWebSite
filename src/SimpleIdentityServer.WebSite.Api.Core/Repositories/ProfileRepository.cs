@@ -20,6 +20,10 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Repositories
 {
     public interface IProfileRepository
     {
-        Profile GetProfile(string subject);
+        Profile GetProfileBySubject(string subject);
+
+        Profile GetProfileByName(string name);
+
+        bool AddProfile(Profile profile);
     }
 }

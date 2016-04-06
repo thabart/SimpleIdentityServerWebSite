@@ -15,19 +15,35 @@
 #endregion
 
 using SimpleIdentityServer.WebSite.Api.Core.Models;
+using SimpleIdentityServer.WebSite.Api.Core.Parameters;
+using SimpleIdentityServer.WebSite.Api.Host.DTOs.Requests;
 using SimpleIdentityServer.WebSite.Api.Host.DTOs.Responses;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Extensions
 {
     internal static class MappingExtensions
     {
-        #region Responses
+        #region To Parameter
+
+        public static AddProfileParameter ToParameter(this PostProfileRequest postProfileRequest)
+        {
+            return new AddProfileParameter
+            {
+                Name = postProfileRequest.Name,
+                Subject = postProfileRequest.Subject
+            };
+        }
+
+        #endregion
+
+        #region ToResponse
 
         public static ProfileResponse ToResponse(this Profile profile)
         {
             return new ProfileResponse
             {
                 AuthorizationServerUrl = profile.AuthorizationServerUrl,
+                Name = profile.Name,
                 IsActive = profile.IsActive,
                 ManagerWebSiteApiUrl  = profile.ManagerWebSiteApiUrl,
                 ManagerWebSiteUrl = profile.ManagerWebSiteUrl,

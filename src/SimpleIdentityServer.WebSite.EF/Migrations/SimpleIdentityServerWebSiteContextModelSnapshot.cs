@@ -28,6 +28,8 @@ namespace SimpleIdentityServer.WebSite.EF.Migrations
 
                     b.Property<string>("ManagerWebSiteUrl");
 
+                    b.Property<string>("Name");
+
                     b.Property<string>("Picture");
 
                     b.HasKey("Subject");
