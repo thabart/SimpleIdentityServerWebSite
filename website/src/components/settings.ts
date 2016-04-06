@@ -5,6 +5,9 @@ export class Settings {
     getCurrentUrl() {
         return CURRENT_URL;
     }
+    getApiUrl() {
+        return API_URL;
+    }
     getClientId() {
         return "SimpleIdentityServerWebSite";
     }

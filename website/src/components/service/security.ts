@@ -57,6 +57,9 @@ export class SecurityService {
         localStorage.removeItem(this._localStorageName);
         this._router.navigateByUrl('/login');
     }
+    getAccessToken() {
+        return localStorage.getItem(this._localStorageName);
+    }
     private extractAccessToken(parameter : string) {
         if (!parameter || parameter.indexOf('#') != 0)
         {

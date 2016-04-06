@@ -29,7 +29,8 @@ import { InstanceComponent } from './instance/instance.ts'
 
 export class IndexComponent implements OnInit {
     isLogoutNotDisplayed: boolean;
-    constructor(private _securityService : SecurityService) { }
+    constructor(
+        private _securityService : SecurityService) { }
     ngOnInit() {
         this.isLogoutNotDisplayed = true;        
         if (this._securityService.isResourceOwnerConnected())
