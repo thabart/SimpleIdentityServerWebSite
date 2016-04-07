@@ -21,9 +21,6 @@ namespace SimpleIdentityServer.WebSite.Api.Host.DTOs.Requests
     [DataContract]
     public class PostProfileRequest
     {
-        [DataMember(Name = Constants.PostProfileRequestNames.Subject)]
-        public string Subject { get; set; }
-
         [DataMember(Name = Constants.PostProfileRequestNames.Name)]
         public string Name { get; set; }
     }

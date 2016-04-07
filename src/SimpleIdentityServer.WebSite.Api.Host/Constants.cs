@@ -58,8 +58,6 @@ namespace SimpleIdentityServer.WebSite.Api.Host
 
         public static class PostProfileRequestNames
         {
-            public const string Subject = "subject";
-
             public const string Name = "name";
         }
 

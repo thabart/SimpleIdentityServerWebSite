@@ -48,20 +48,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
         [Authorize]
         public ProfileResponse GetCurrentProfile()
         {
-            var claimsIdentity = User.Identity as ClaimsIdentity;
-            if (claimsIdentity == null)
-            {
-                throw new IdentityServerException(ErrorCodes.InternalErrorCode,
-                    ErrorDescriptions.TheClaimsCannotBeRetrieved);
-            }
-
-            var subject = claimsIdentity.GetSubject();
-            if (string.IsNullOrWhiteSpace(subject))
-            {
-                throw new IdentityServerException(ErrorCodes.InternalErrorCode,
-                    ErrorDescriptions.TheSubjectCannotBeRetrieved);
-            }
-
+            var subject = GetSubject();
             return _profileActions
                 .GetCurrentProfile(subject)
                 .ToResponse();
@@ -76,7 +63,10 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
                 throw new ArgumentNullException(nameof(postProfileRequest));
             }
 
-            var profile = _profileActions.AddProfile(postProfileRequest.ToParameter());
+            var subject = GetSubject();
+            var parameter = postProfileRequest.ToParameter();
+            parameter.Subject = subject;
+            var profile = _profileActions.AddProfile(parameter);
             if (profile == null)
             {
                 Response.StatusCode = (int)HttpStatusCode.NoContent;
@@ -84,6 +74,29 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
             }
 
             return profile.ToResponse();
+        }
+
+        #endregion
+
+        #region Private methods
+
+        private string GetSubject()
+        {
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+            if (claimsIdentity == null)
+            {
+                throw new IdentityServerException(ErrorCodes.InternalErrorCode,
+                    ErrorDescriptions.TheClaimsCannotBeRetrieved);
+            }
+
+            var subject = claimsIdentity.GetSubject();
+            if (string.IsNullOrWhiteSpace(subject))
+            {
+                throw new IdentityServerException(ErrorCodes.InternalErrorCode,
+                    ErrorDescriptions.TheSubjectCannotBeRetrieved);
+            }
+
+            return subject;
         }
 
         #endregion

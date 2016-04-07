@@ -29,8 +29,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Extensions
         {
             return new AddProfileParameter
             {
-                Name = postProfileRequest.Name,
-                Subject = postProfileRequest.Subject
+                Name = postProfileRequest.Name
             };
         }
 
