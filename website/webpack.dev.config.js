@@ -1,13 +1,12 @@
 const AUTHORIZATION_URL = 'http://localhost:5002';
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'http://localhost:5000';
 const metadata = {
     title: 'Simple Identity Server',
     baseUrl: '/',
     host: 'localhost',
     port: 3000,
     ENV: 'development',
-    AUTHORIZATION_URL: AUTHORIZATION_URL,
-    API_URL: API_URL
+    AUTHORIZATION_URL: AUTHORIZATION_URL
 };
 
 var currentUrl = "http://" + metadata.host + ":" + metadata.port;
@@ -20,8 +19,8 @@ module.exports = webPackMerge(commonConfig, {
   plugins: [
       new DefinePlugin({
           'AUTHORIZATION_URL': JSON.stringify(metadata.AUTHORIZATION_URL),
-          'API_URL': JSON.stringify(metadata.API_URL),
-          'CURRENT_URL': JSON.stringify(currentUrl)
+          'CURRENT_URL': JSON.stringify(currentUrl),
+          'API_URL': JSON.stringify(API_URL)
       })
   ],
   devServer: {

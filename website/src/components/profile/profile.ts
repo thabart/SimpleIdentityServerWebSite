@@ -15,9 +15,7 @@ export class ProfileComponent implements OnInit {
                 console.log(res);
             })
             .catch(r => {
-                console.log(r.json());
-                console.log('coucou');
-                console.log(r); 
+                console.log('r'); 
             });
     }
 }
