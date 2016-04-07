@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-#region copyright
+﻿#region copyright
 // Copyright 2015 Habart Thierry
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +13,8 @@ using System.Linq;
 // See the License for the specific language governing permissions and
 // limitations under the License.
 #endregion
+
+using System;
 
 namespace SimpleIdentityServer.WebSite.Api.Core.Exceptions
 {

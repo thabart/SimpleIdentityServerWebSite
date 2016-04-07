@@ -22,7 +22,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host
         {
             public const string Root = "api";
 
-            public const string Docker = Root + "/dockers";
+            public const string Container = Root + "/containers";
 
             public const string Profile = Root + "/profiles";
         }
@@ -30,6 +30,13 @@ namespace SimpleIdentityServer.WebSite.Api.Host
         public static class ProfileActions
         {
             public const string CurrentProfile = "current";
+        }
+
+        public static class DockerActions
+        {
+            public const string Start = "{name}/start";
+
+            public const string Stop = "{name}/stop";
         }
 
         public static class ErrorResponseNames

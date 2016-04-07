@@ -14,44 +14,39 @@
 // limitations under the License.
 #endregion
 
-using Docker.DotNet;
-using SimpleIdentityServer.WebSite.Api.Core.Validators;
+using Microsoft.AspNet.Mvc;
+using Microsoft.AspNet.Authorization;
 using System;
 
-namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
+namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
-    public interface IStartDockerContainerOperation
-    {
-
-    }
-
-    internal sealed class StartDockerContainerOperation : IStartDockerContainerOperation
-    {
-        private readonly IContainerValidator _containerValidator;
-
-        #region Constructor
-
-        public StartDockerContainerOperation(IContainerValidator containerValidator)
-        {
-            _containerValidator = containerValidator;
-        }
-
-        #endregion
-
+    [Route(Constants.RouteValues.Container)]
+    public class ContainersController : Controller
+    {        
         #region Public methods
 
-        public void Execute(string name)
+        [HttpGet(Constants.DockerActions.Start)]
+        [Authorize]
+        public bool GetStart(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentNullException(nameof(name));
             }
 
-            _containerValidator.CheckContainerExist(name);
+            return true;
+        }
+        
+        [HttpGet(Constants.DockerActions.Stop)]
+        [Authorize]
+        public bool GetStop(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
 
-            var dockerClient = new DockerClientConfiguration(new Uri("http://ubuntu-docker.cloudapp.net:4243"))
-                .CreateClient();
-            
+            return true;
         }
 
         #endregion

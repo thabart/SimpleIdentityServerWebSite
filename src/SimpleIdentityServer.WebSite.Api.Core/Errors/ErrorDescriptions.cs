@@ -23,5 +23,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Errors
         public const string TheProfileIsNotActive = "the profile {0} is not active";
 
         public const string TheProfileAlreadyExists = "the profile already exists";
+
+        public const string TheContainerDoesntExist = "the container {0} doesn't exist";
     }
 }

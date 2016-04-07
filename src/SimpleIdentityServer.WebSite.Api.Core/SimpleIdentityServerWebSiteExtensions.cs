@@ -15,8 +15,10 @@
 #endregion
 
 using Microsoft.Extensions.DependencyInjection;
+using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles.Actions;
+using SimpleIdentityServer.WebSite.Api.Core.Validators;
 using System;
 
 namespace SimpleIdentityServer.WebSite.Api.Core
@@ -33,6 +35,8 @@ namespace SimpleIdentityServer.WebSite.Api.Core
             serviceCollection.AddTransient<IProfileActions, ProfileActions>();
             serviceCollection.AddTransient<IGetCurrentProfileAction, GetCurrentProfileAction>();
             serviceCollection.AddTransient<IAddProfileAction, AddProfileAction>();
+            serviceCollection.AddTransient<IContainerValidator, ContainerValidator>();
+            serviceCollection.AddTransient<IStartDockerContainerOperation, StartDockerContainerOperation>();
 
             return serviceCollection;
         }
