@@ -1,4 +1,4 @@
-require("./index.css")
+require("./styles/index.css")
 
 import 'rxjs/Rx';
 import 'angular2/bundles/angular2-polyfills'
@@ -8,10 +8,10 @@ import {provide} from 'angular2/core'
 import {HTTP_PROVIDERS} from 'angular2/http'
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router'
 import {AppComponent} from './components/app.ts'
-import {SecurityService} from './components/service/security.ts'
-import {ProfileService} from './components/service/profile.ts'
+import {SecurityService} from './components/services/security.ts'
+import {ProfileService} from './components/services/profile.ts'
+import {IdentityServerService} from './components/services/identityserver.ts'
 import {Settings} from './components/settings.ts'
-import {IdentityServerService} from './components/service/identityserver.ts'
 
 export function main()
 {

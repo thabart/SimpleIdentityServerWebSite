@@ -3,7 +3,7 @@ import { Directive,
     DynamicComponentLoader,
     Attribute } from 'angular2/core';
 import { RouterOutlet, ComponentInstruction, Router  } from 'angular2/router'
-import { IntrospectionRequest, IdentityServerService } from './service/identityserver.ts'
+import { IntrospectionRequest, IdentityServerService } from './services/identityserver.ts'
 
 @Directive({
     selector: 'loggedin-router-outlet'

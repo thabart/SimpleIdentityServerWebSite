@@ -1,6 +1,6 @@
 import { Component, OnInit } from 'angular2/core'
 import { LoginComponent } from './login/login.ts'
-import { SecurityService } from './service/security.ts'
+import { SecurityService } from './services/security.ts'
 import { RouteConfig, RouterLink } from 'angular2/router'
 import { LoggedInOutlet } from './loggedInOutlet.ts'
 

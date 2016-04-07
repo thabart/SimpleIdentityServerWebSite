@@ -5,7 +5,8 @@ var path = require('path'),
     helpers = require('./helpers');
 var HtmlWebpackPlugin = require('html-webpack-plugin'),
     ProvidePlugin = require('webpack/lib/ProvidePlugin'),
-    DefinePlugin = require('webpack/lib/DefinePlugin');
+    DefinePlugin = require('webpack/lib/DefinePlugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin');
     
 module.exports = {
   entry: {
@@ -13,7 +14,7 @@ module.exports = {
       'main': path.join(srcPath, 'main.ts')
   },  
   output: {
-      path: 'builds',
+      path: path.resolve('./builds'),
       filename: '[name].js'
   },
   module: {
@@ -40,6 +41,10 @@ module.exports = {
           {
               test: /bootstrap\/dist\/js\/umd\//,
               loader: 'imports?jQuery=jquery'
+          },
+          {
+              test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, 
+              loader: 'file?name=fonts/[name].[hash].[ext]?'
           }
       ]
   },  
@@ -55,6 +60,9 @@ module.exports = {
       }),
       new ProvidePlugin({
           "window.Tether": "tether"
-      })
+      }),
+      new CopyWebpackPlugin([{
+        from: helpers.root('src/styles')
+      }])
   ]
 };

@@ -1,6 +1,6 @@
 import { Component } from 'angular2/core'
 import { Settings } from '../settings.ts'
-import { SecurityService } from '../service/security.ts'
+import { SecurityService } from '../services/security.ts'
 
 @Component({
     template: require('./login.html'),

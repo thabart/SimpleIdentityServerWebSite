@@ -3,7 +3,7 @@ import { RouteConfig, RouterOutlet } from 'angular2/router'
 import { LoginComponent } from './login/login.ts'
 import { IndexComponent } from './index.ts'
 import { Settings } from './settings.ts'
-import { SecurityService } from './service/security.ts'
+import { SecurityService } from './services/security.ts'
 import { CallBackErrorComponent } from './error/callback-error.ts'
 
 @Component({

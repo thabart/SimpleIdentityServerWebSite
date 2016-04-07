@@ -1,5 +1,9 @@
 <h2>Profile</h2>
-<form class="form-horizontal">
+<div class="waiting" [hidden]="isWaitingNotDisplayed"></div>
+<div class="alert alert-danger" role="alert" [hidden]="isErrorNotDisplayed">
+    <strong>Message</strong> : {{errorMessage}}
+</div>
+<form class="form-horizontal" [hidden]="isDisplayProfileInformationNotDisplayed">
     <div class="form-group">
         <label class="control-label col-xs-3">Login</label>
         <div class="col-xs-5">
@@ -24,4 +28,13 @@
             <input class="form-control" type="text" readonly="true" value="http://localhost:5000/authorizationmanagement" />
         </div>
     </div>
+</form>
+<form class="form-horizontal" [hidden]="isCreateProfileNotDisplayed">    
+    <div class="form-group">
+        <label class="control-label col-xs-3">Name</label>
+        <div class="col-xs-5">
+            <input class="form-control" type="text" [(ngModel)]="name" />
+        </div>
+    </div>
+    <button class="btn btn-orange" (click)="createProfile()">Create profile</button>
 </form>
