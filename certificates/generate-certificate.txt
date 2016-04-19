@@ -1,0 +1,2 @@
+rem extract the pfx follow this tutorial to interact with the API : https://github.com/ahmetalpbalkan/Docker.DotNet#example-https-authentication-to-docker
+openssl pkcs12 -export -inkey key.pem -in cert.pem -out key.pfx
