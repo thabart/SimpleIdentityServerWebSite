@@ -17,18 +17,31 @@
 using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Authorization;
 using System;
+using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
     [Route(Constants.RouteValues.Container)]
     public class ContainersController : Controller
-    {        
+    {
+        private readonly IStartDockerContainerOperation _startDockerContainerOperation;
+        
+        #region Constructor
+
+        public ContainersController(IStartDockerContainerOperation startDockerContainerOperation)
+        {
+            _startDockerContainerOperation = startDockerContainerOperation;
+        }
+
+        #endregion
+
         #region Public methods
 
         [HttpGet(Constants.DockerActions.Start)]
-        [Authorize]
+        // [Authorize]
         public bool GetStart(string name)
         {
+            _startDockerContainerOperation.Execute("name");
             if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentNullException(nameof(name));
@@ -38,7 +51,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
         }
         
         [HttpGet(Constants.DockerActions.Stop)]
-        [Authorize]
+        // [Authorize]
         public bool GetStop(string name)
         {
             if (string.IsNullOrWhiteSpace(name))

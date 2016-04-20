@@ -2037,6 +2037,7 @@
           "System.Net.Http"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -2044,6 +2045,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -2066,6 +2068,7 @@
           "System.Xml"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -2078,6 +2081,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -2105,6 +2109,7 @@
           "System.Runtime.Serialization"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -2116,6 +2121,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -2141,6 +2147,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
@@ -2150,6 +2157,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
@@ -2177,6 +2185,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -2187,6 +2196,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -2238,12 +2248,14 @@
           "System.Web"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
@@ -2259,6 +2271,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Logging.dll": {},
@@ -2267,6 +2280,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Logging.dll": {},
@@ -2290,10 +2304,12 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
@@ -4397,6 +4413,7 @@
           "System.Security.Cryptography.Algorithms": "4.0.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -4405,6 +4422,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -4422,6 +4440,7 @@
           "System.Runtime.Serialization.Json": "4.0.1-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -4435,6 +4454,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -4466,6 +4486,7 @@
           "System.Xml.XmlSerializer": "4.0.11-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -4478,6 +4499,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -4498,6 +4520,7 @@
           "SimpleIdentityServer.Core.Jwt": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
@@ -4508,6 +4531,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
@@ -4530,6 +4554,7 @@
           "SimpleIdentityServer.Core": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -4541,6 +4566,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -4589,6 +4615,7 @@
           "System.Reflection": "4.1.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
@@ -4596,6 +4623,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
@@ -4609,6 +4637,7 @@
           "System.Diagnostics.Tracing": "4.1.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Logging.dll": {},
@@ -4618,6 +4647,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Logging.dll": {},
@@ -4636,11 +4666,13 @@
           "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
@@ -5553,48 +5585,27 @@
           "ref/dotnet5.4/System.Security.Cryptography.Encoding.dll": {}
         }
       },
-      "System.Security.Cryptography.Encryption/4.0.0-beta-23019": {
+      "System.Security.Cryptography.Hashing/4.0.0-beta-23206": {
         "type": "package",
         "dependencies": {
-          "System.Globalization": "4.0.0-beta-23019",
-          "System.IO": "4.0.0-beta-23019",
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Threading.Tasks": "4.0.0-beta-23019"
+          "System.Runtime": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0-beta-23206"
         },
         "compile": {
-          "ref/dotnet/System.Security.Cryptography.Encryption.dll": {}
-        },
-        "runtime": {
-          "lib/DNXCore50/System.Security.Cryptography.Encryption.dll": {}
-        }
-      },
-      "System.Security.Cryptography.Hashing/4.0.0-beta-23019": {
-        "type": "package",
-        "dependencies": {
-          "System.IO": "4.0.0-beta-23019",
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019"
-        },
-        "compile": {
-          "ref/dotnet/System.Security.Cryptography.Hashing.dll": {}
+          "lib/DNXCore50/System.Security.Cryptography.Hashing.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Security.Cryptography.Hashing.dll": {}
         }
       },
-      "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23019": {
+      "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23206": {
         "type": "package",
         "dependencies": {
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Runtime.InteropServices": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Hashing": "4.0.0-beta-23019",
-          "System.Security.Cryptography.RandomNumberGenerator": "4.0.0-beta-23019"
+          "System.Runtime": "4.0.0",
+          "System.Security.Cryptography.Algorithms": "4.0.0-beta-23206"
         },
         "compile": {
-          "ref/dotnet/System.Security.Cryptography.Hashing.Algorithms.dll": {}
+          "lib/DNXCore50/System.Security.Cryptography.Hashing.Algorithms.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Security.Cryptography.Hashing.Algorithms.dll": {}
@@ -5640,21 +5651,6 @@
         },
         "runtime": {
           "lib/dotnet5.4/System.Security.Cryptography.Primitives.dll": {}
-        }
-      },
-      "System.Security.Cryptography.RandomNumberGenerator/4.0.0-beta-23019": {
-        "type": "package",
-        "dependencies": {
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Runtime.InteropServices": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-23019"
-        },
-        "compile": {
-          "ref/dotnet/System.Security.Cryptography.RandomNumberGenerator.dll": {}
-        },
-        "runtime": {
-          "lib/DNXCore50/System.Security.Cryptography.RandomNumberGenerator.dll": {}
         }
       },
       "System.Security.Cryptography.X509Certificates/4.0.0-beta-23516": {
@@ -7955,6 +7951,7 @@
           "System.Net.Http"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -7962,6 +7959,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -7984,6 +7982,7 @@
           "System.Xml"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -7996,6 +7995,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -8023,6 +8023,7 @@
           "System.Runtime.Serialization"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -8034,6 +8035,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -8059,6 +8061,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
@@ -8068,6 +8071,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
@@ -8095,6 +8099,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -8105,6 +8110,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -8156,12 +8162,14 @@
           "System.Web"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
@@ -8177,6 +8185,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Logging.dll": {},
@@ -8185,6 +8194,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Logging.dll": {},
@@ -8208,10 +8218,12 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
@@ -10507,6 +10519,7 @@
           "System.Net.Http"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -10514,6 +10527,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -10536,6 +10550,7 @@
           "System.Xml"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -10548,6 +10563,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -10575,6 +10591,7 @@
           "System.Runtime.Serialization"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -10586,6 +10603,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -10611,6 +10629,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
@@ -10620,6 +10639,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
@@ -10647,6 +10667,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -10657,6 +10678,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnx451/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -10708,12 +10730,14 @@
           "System.Web"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
@@ -10729,6 +10753,7 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Logging.dll": {},
@@ -10737,6 +10762,7 @@
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.Core.dll": {},
           "lib/dnx451/SimpleIdentityServer.Host.dll": {},
           "lib/dnx451/SimpleIdentityServer.Logging.dll": {},
@@ -10760,10 +10786,12 @@
           "System.Core"
         ],
         "compile": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         },
         "runtime": {
+          "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnx451/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll": {}
         }
@@ -13387,6 +13415,7 @@
           "System.Security.Cryptography.Algorithms": "4.0.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -13395,6 +13424,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -13412,6 +13442,7 @@
           "System.Runtime.Serialization.Json": "4.0.1-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -13425,6 +13456,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -13456,6 +13488,7 @@
           "System.Xml.XmlSerializer": "4.0.11-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -13468,6 +13501,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -13488,6 +13522,7 @@
           "SimpleIdentityServer.Core.Jwt": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
@@ -13498,6 +13533,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
@@ -13520,6 +13556,7 @@
           "SimpleIdentityServer.Core": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -13531,6 +13568,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -13579,6 +13617,7 @@
           "System.Reflection": "4.1.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
@@ -13586,6 +13625,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
@@ -13599,6 +13639,7 @@
           "System.Diagnostics.Tracing": "4.1.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Logging.dll": {},
@@ -13608,6 +13649,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Logging.dll": {},
@@ -13626,11 +13668,13 @@
           "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
@@ -14655,48 +14699,27 @@
           "ref/dotnet5.4/System.Security.Cryptography.Encoding.dll": {}
         }
       },
-      "System.Security.Cryptography.Encryption/4.0.0-beta-23019": {
+      "System.Security.Cryptography.Hashing/4.0.0-beta-23206": {
         "type": "package",
         "dependencies": {
-          "System.Globalization": "4.0.0-beta-23019",
-          "System.IO": "4.0.0-beta-23019",
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Threading.Tasks": "4.0.0-beta-23019"
+          "System.Runtime": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0-beta-23206"
         },
         "compile": {
-          "ref/dotnet/System.Security.Cryptography.Encryption.dll": {}
-        },
-        "runtime": {
-          "lib/DNXCore50/System.Security.Cryptography.Encryption.dll": {}
-        }
-      },
-      "System.Security.Cryptography.Hashing/4.0.0-beta-23019": {
-        "type": "package",
-        "dependencies": {
-          "System.IO": "4.0.0-beta-23019",
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019"
-        },
-        "compile": {
-          "ref/dotnet/System.Security.Cryptography.Hashing.dll": {}
+          "lib/DNXCore50/System.Security.Cryptography.Hashing.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Security.Cryptography.Hashing.dll": {}
         }
       },
-      "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23019": {
+      "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23206": {
         "type": "package",
         "dependencies": {
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Runtime.InteropServices": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Hashing": "4.0.0-beta-23019",
-          "System.Security.Cryptography.RandomNumberGenerator": "4.0.0-beta-23019"
+          "System.Runtime": "4.0.0",
+          "System.Security.Cryptography.Algorithms": "4.0.0-beta-23206"
         },
         "compile": {
-          "ref/dotnet/System.Security.Cryptography.Hashing.Algorithms.dll": {}
+          "lib/DNXCore50/System.Security.Cryptography.Hashing.Algorithms.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Security.Cryptography.Hashing.Algorithms.dll": {}
@@ -14742,21 +14765,6 @@
         },
         "runtime": {
           "lib/dotnet5.4/System.Security.Cryptography.Primitives.dll": {}
-        }
-      },
-      "System.Security.Cryptography.RandomNumberGenerator/4.0.0-beta-23019": {
-        "type": "package",
-        "dependencies": {
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Runtime.InteropServices": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-23019"
-        },
-        "compile": {
-          "ref/dotnet/System.Security.Cryptography.RandomNumberGenerator.dll": {}
-        },
-        "runtime": {
-          "lib/DNXCore50/System.Security.Cryptography.RandomNumberGenerator.dll": {}
         }
       },
       "System.Security.Cryptography.X509Certificates/4.0.0-beta-23516": {
@@ -17419,6 +17427,7 @@
           "System.Security.Cryptography.Algorithms": "4.0.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -17427,6 +17436,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
@@ -17444,6 +17454,7 @@
           "System.Runtime.Serialization.Json": "4.0.1-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -17457,6 +17468,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
@@ -17488,6 +17500,7 @@
           "System.Xml.XmlSerializer": "4.0.11-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -17500,6 +17513,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
@@ -17520,6 +17534,7 @@
           "SimpleIdentityServer.Core.Jwt": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
@@ -17530,6 +17545,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
@@ -17552,6 +17568,7 @@
           "SimpleIdentityServer.Core": "1.0.0-rc2-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -17563,6 +17580,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.DataAccess.SqlServer.dll": {},
@@ -17611,6 +17629,7 @@
           "System.Reflection": "4.1.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
@@ -17618,6 +17637,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
@@ -17631,6 +17651,7 @@
           "System.Diagnostics.Tracing": "4.1.0-rc2-23826"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Logging.dll": {},
@@ -17640,6 +17661,7 @@
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Core.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Host.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.Logging.dll": {},
@@ -17658,11 +17680,13 @@
           "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final"
         },
         "compile": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
         },
         "runtime": {
+          "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll": {},
           "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll": {},
           "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll": {}
@@ -18687,48 +18711,27 @@
           "ref/dotnet5.4/System.Security.Cryptography.Encoding.dll": {}
         }
       },
-      "System.Security.Cryptography.Encryption/4.0.0-beta-23019": {
+      "System.Security.Cryptography.Hashing/4.0.0-beta-23206": {
         "type": "package",
         "dependencies": {
-          "System.Globalization": "4.0.0-beta-23019",
-          "System.IO": "4.0.0-beta-23019",
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Threading.Tasks": "4.0.0-beta-23019"
+          "System.Runtime": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0-beta-23206"
         },
         "compile": {
-          "ref/dotnet/System.Security.Cryptography.Encryption.dll": {}
-        },
-        "runtime": {
-          "lib/DNXCore50/System.Security.Cryptography.Encryption.dll": {}
-        }
-      },
-      "System.Security.Cryptography.Hashing/4.0.0-beta-23019": {
-        "type": "package",
-        "dependencies": {
-          "System.IO": "4.0.0-beta-23019",
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019"
-        },
-        "compile": {
-          "ref/dotnet/System.Security.Cryptography.Hashing.dll": {}
+          "lib/DNXCore50/System.Security.Cryptography.Hashing.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Security.Cryptography.Hashing.dll": {}
         }
       },
-      "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23019": {
+      "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23206": {
         "type": "package",
         "dependencies": {
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Runtime.InteropServices": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Hashing": "4.0.0-beta-23019",
-          "System.Security.Cryptography.RandomNumberGenerator": "4.0.0-beta-23019"
+          "System.Runtime": "4.0.0",
+          "System.Security.Cryptography.Algorithms": "4.0.0-beta-23206"
         },
         "compile": {
-          "ref/dotnet/System.Security.Cryptography.Hashing.Algorithms.dll": {}
+          "lib/DNXCore50/System.Security.Cryptography.Hashing.Algorithms.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Security.Cryptography.Hashing.Algorithms.dll": {}
@@ -18774,21 +18777,6 @@
         },
         "runtime": {
           "lib/dotnet5.4/System.Security.Cryptography.Primitives.dll": {}
-        }
-      },
-      "System.Security.Cryptography.RandomNumberGenerator/4.0.0-beta-23019": {
-        "type": "package",
-        "dependencies": {
-          "System.Resources.ResourceManager": "4.0.0-beta-23019",
-          "System.Runtime": "4.0.0-beta-23019",
-          "System.Runtime.InteropServices": "4.0.0-beta-23019",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-23019"
-        },
-        "compile": {
-          "ref/dotnet/System.Security.Cryptography.RandomNumberGenerator.dll": {}
-        },
-        "runtime": {
-          "lib/DNXCore50/System.Security.Cryptography.RandomNumberGenerator.dll": {}
         }
       },
       "System.Security.Cryptography.X509Certificates/4.0.0-beta-23516": {
@@ -21486,8 +21474,10 @@
     },
     "SimpleIdentityServer.Core/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "XpzQyUGrnKh5w/+xFba8w0LpTkD61+lTNTnPo1k3wdxl0qN+R+QBWVgzzLg9CrN7Zg4IeTgt2y5lZvbNEPHUPQ==",
+      "sha512": "8fLm1tBVVXf/wmmmzEDPsc1ToJGkFKtUCBhMulBsz0Le774z8J2DLfO5MqGLPVQFwca/klM2wiX8Wbm5YlEQHg==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Core.dll",
         "lib/dnx451/SimpleIdentityServer.Core.xml",
         "lib/dnx451/SimpleIdentityServer.Host.dll",
@@ -21498,6 +21488,8 @@
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Core.dll",
         "lib/dnxcore50/SimpleIdentityServer.Core.xml",
         "lib/dnxcore50/SimpleIdentityServer.Host.dll",
@@ -21517,8 +21509,10 @@
     },
     "SimpleIdentityServer.Core.Common/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "8fuihR3KHYHvc45GJY1S/uhi2/+YewylONEhGbOZe2ieKnkDjqXAhGPyGvalX/OAWXSvLmDsALqd7cILoZ42IA==",
+      "sha512": "/gcGEabSPMBi5Vwhz8LVA2aWIgtro3xYKVlNrCHZq5RI7+cML76UIR1wkyV8irKeukjQO5P6+O5u3hNqPmoScg==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Core.Common.dll",
         "lib/dnx451/SimpleIdentityServer.Core.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Core.dll",
@@ -21539,6 +21533,8 @@
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Core.Common.dll",
         "lib/dnxcore50/SimpleIdentityServer.Core.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Core.dll",
@@ -21568,8 +21564,10 @@
     },
     "SimpleIdentityServer.Core.Jwt/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "09kpjihUZ0Nq0ghzJWZt4Ammn7DsyDn5YxrV0WxNsIDe3oSIOFYV1kVtho0k3N52hN99OJbkQbQ+ezWp8oIjmA==",
+      "sha512": "tDnt3pOPvd3/hcRmYsZtv5O9lJfgp0RNChahhG3/Sw5A78nAii+dN+pGhowOr33bkqDTnhLvsORcmmdkaObbxw==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Core.dll",
         "lib/dnx451/SimpleIdentityServer.Core.Jwt.dll",
         "lib/dnx451/SimpleIdentityServer.Core.Jwt.xml",
@@ -21588,6 +21586,8 @@
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Core.dll",
         "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.dll",
         "lib/dnxcore50/SimpleIdentityServer.Core.Jwt.xml",
@@ -21615,8 +21615,10 @@
     },
     "SimpleIdentityServer.DataAccess.Fake/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "6FvqabhBDkD8vLJvr3rRb2wHuUgPEr5Uql7YVmn+dzTdia7xqKxxVD7mbEDUEETXDeQ7HgTt/UbODbyeCbQ/YA==",
+      "sha512": "vjKN5/9LdkcPrJ771Gjs5jO+WITN1Q9XhAjhb9abRusUS2lvfklFNLAAPwCh2O8SGh1ljf54IGBh+30cqP7hCw==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Core.dll",
         "lib/dnx451/SimpleIdentityServer.Core.xml",
         "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll",
@@ -21631,6 +21633,8 @@
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Core.dll",
         "lib/dnxcore50/SimpleIdentityServer.Core.xml",
         "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll",
@@ -21654,11 +21658,13 @@
     },
     "SimpleIdentityServer.DataAccess.SqlServer/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "oGTWywUf+FSJ2tohPg24mK9vgi6nqhDksiy+AjeFq9tV7H3yZA1JV3hilySsdwLSZbst3tXdTl/JZe/6y3eATg==",
+      "sha512": "B5wis6PdLF7NiSAWCdYKaEVo7L5TFJ6judeynjHfT6jRgexRthBcT0jGQhx+Pq9WlCd7Jr6phYglhQez6YCF1g==",
       "files": [
         "app/ef",
         "app/ef.cmd",
         "app/project.json",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Core.dll",
         "lib/dnx451/SimpleIdentityServer.Core.xml",
         "lib/dnx451/SimpleIdentityServer.DataAccess.Fake.dll",
@@ -21675,6 +21681,8 @@
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Core.dll",
         "lib/dnxcore50/SimpleIdentityServer.Core.xml",
         "lib/dnxcore50/SimpleIdentityServer.DataAccess.Fake.dll",
@@ -21700,8 +21708,10 @@
     },
     "SimpleIdentityServer.Host/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "Cq7d9gk4x5dVsEWUiI6MNwZ3VPKZj/ZklkCbSGF3RIAnK8vmzWHmykBDfEs48wTOMRNzJe83h/6Yj+csQQ40bA==",
+      "sha512": "JlAkwAwmdqWUunehpRnKPpMGHUwNiYujQMMRnwcxnrmpJu+Y/kBsx4Hx4jMG2jPLcIvrTOCK8cATiZZrW1GpRw==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Host.dll",
         "lib/dnx451/SimpleIdentityServer.Host.xml",
         "lib/dnx451/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll",
@@ -21710,6 +21720,8 @@
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Host.dll",
         "lib/dnxcore50/SimpleIdentityServer.Host.xml",
         "lib/dnxcore50/SimpleIdentityServer.Oauth2Instrospection.Authentication.dll",
@@ -21727,8 +21739,10 @@
     },
     "SimpleIdentityServer.Logging/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "BZpBxYE9st57/hG7gLFH4PYzMlqRJToCB37BMa3xIbrLXnhNQsyU7Ngp5g13om9gAByD3zp8ko0pPI6m2M5ySA==",
+      "sha512": "88Rz+aEX6QRX+jbhjt9dmDyoMuD0CPbgAxp9mHx9dW1nQhzHCp78FQC/4SX60yh3XutjUFqpQZf49X/SrgGkNA==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.Core.dll",
         "lib/dnx451/SimpleIdentityServer.Core.xml",
         "lib/dnx451/SimpleIdentityServer.Host.dll",
@@ -21741,6 +21755,8 @@
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.Core.dll",
         "lib/dnxcore50/SimpleIdentityServer.Core.xml",
         "lib/dnxcore50/SimpleIdentityServer.Host.dll",
@@ -21762,12 +21778,16 @@
     },
     "SimpleIdentityServer.RateLimitation/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "b7HTmfzgeLIoodY6uQcO2WQD+diFBYTG1uuXloHkH+Ho/6CyboyemiInthejbvD5jJfz5e5MP6GMIv1sq5xKVQ==",
+      "sha512": "zkr55nj5S9z8u/kNcRJwvVyETltJeLWwa745izYVHVJGJB7E44qLGf84yVh6wLI/zpE9nhHwTSThVfxTWtKjUg==",
       "files": [
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnx451/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnx451/SimpleIdentityServer.RateLimitation.dll",
         "lib/dnx451/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.dll",
         "lib/dnx451/SimpleIdentityServer.UserInformation.Authentication.xml",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.dll",
+        "lib/dnxcore50/SimpleIdentityServer.Authentication.Common.xml",
         "lib/dnxcore50/SimpleIdentityServer.RateLimitation.dll",
         "lib/dnxcore50/SimpleIdentityServer.RateLimitation.xml",
         "lib/dnxcore50/SimpleIdentityServer.UserInformation.Authentication.dll",
@@ -25100,7 +25120,7 @@
     },
     "System.Security.Cryptography.Algorithms.Extensions/1.0.0-rc2-final": {
       "type": "package",
-      "sha512": "PNkz0nWdR0OcHH8O9m05yRIXe4Xi7Dzn97wP7GGwCmT3Wxds8ARKU1KfDa39Bc/nvOZJR8Y4jb2Uz7FijYhFaw==",
+      "sha512": "ws/PGrwxe3w44ZJ0jQJ1zXssc4i1Gfhj8IXX+DTbrg5Yw8bNTgD351XshjfB0OHgcJz/B1O0SEtV7+8Li9aqZg==",
       "files": [
         "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.dll",
         "lib/dnxcore50/System.Security.Cryptography.Algorithms.Extensions.xml",
@@ -25183,42 +25203,25 @@
         "ThirdPartyNotices.txt"
       ]
     },
-    "System.Security.Cryptography.Encryption/4.0.0-beta-23019": {
+    "System.Security.Cryptography.Hashing/4.0.0-beta-23206": {
       "type": "package",
-      "sha512": "W95rPBfpgVShPysa/TcLKYQvKjFO0Uq6Obo2DYpKM2+N6SoEVHaBWTxxoImq7vJT/jSlDf0K+SREFBGSj6Gj5A==",
-      "files": [
-        "lib/DNXCore50/System.Security.Cryptography.Encryption.dll",
-        "lib/net46/System.Security.Cryptography.Encryption.dll",
-        "ref/dotnet/System.Security.Cryptography.Encryption.dll",
-        "ref/net46/System.Security.Cryptography.Encryption.dll",
-        "System.Security.Cryptography.Encryption.4.0.0-beta-23019.nupkg",
-        "System.Security.Cryptography.Encryption.4.0.0-beta-23019.nupkg.sha512",
-        "System.Security.Cryptography.Encryption.nuspec"
-      ]
-    },
-    "System.Security.Cryptography.Hashing/4.0.0-beta-23019": {
-      "type": "package",
-      "sha512": "OJVvg0DGR/yjOrov4XiXV0s6+ex5W4emR6Wq2JhObjTIEXzwL3NiTeS94XRbTpDbpSI9An9l217qvVwaPT4qCA==",
+      "serviceable": true,
+      "sha512": "jez1jdNa9JrVH93p91tIT6JACzfL9XW/8UQgGyc9H7lQT895esleEdNYimWEhaxEEXsshMizJmTnlZVSu4u03A==",
       "files": [
         "lib/DNXCore50/System.Security.Cryptography.Hashing.dll",
-        "lib/net46/System.Security.Cryptography.Hashing.dll",
-        "ref/dotnet/System.Security.Cryptography.Hashing.dll",
-        "ref/net46/System.Security.Cryptography.Hashing.dll",
-        "System.Security.Cryptography.Hashing.4.0.0-beta-23019.nupkg",
-        "System.Security.Cryptography.Hashing.4.0.0-beta-23019.nupkg.sha512",
+        "System.Security.Cryptography.Hashing.4.0.0-beta-23206.nupkg",
+        "System.Security.Cryptography.Hashing.4.0.0-beta-23206.nupkg.sha512",
         "System.Security.Cryptography.Hashing.nuspec"
       ]
     },
-    "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23019": {
+    "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-23206": {
       "type": "package",
-      "sha512": "Wgmw7eEYwWuCmPDOJ9uFMJimk5o/ZSKfGYTl5U2wpPLKg3tt0fAExMtEMNakvvq98rRpQE0VMPzho5hXZN0rdw==",
+      "serviceable": true,
+      "sha512": "9obkkNvXNjdZS7wLDpSwol7jfdeVWBGsYpwp522npqBiJnjKZwPYvnS8nI+ZUyj02XXIrjFVbMux1e+2MjRpzw==",
       "files": [
         "lib/DNXCore50/System.Security.Cryptography.Hashing.Algorithms.dll",
-        "lib/net46/System.Security.Cryptography.Hashing.Algorithms.dll",
-        "ref/dotnet/System.Security.Cryptography.Hashing.Algorithms.dll",
-        "ref/net46/System.Security.Cryptography.Hashing.Algorithms.dll",
-        "System.Security.Cryptography.Hashing.Algorithms.4.0.0-beta-23019.nupkg",
-        "System.Security.Cryptography.Hashing.Algorithms.4.0.0-beta-23019.nupkg.sha512",
+        "System.Security.Cryptography.Hashing.Algorithms.4.0.0-beta-23206.nupkg",
+        "System.Security.Cryptography.Hashing.Algorithms.4.0.0-beta-23206.nupkg.sha512",
         "System.Security.Cryptography.Hashing.Algorithms.nuspec"
       ]
     },
@@ -25260,19 +25263,6 @@
         "System.Security.Cryptography.Primitives.4.0.0-rc2-23826.nupkg.sha512",
         "System.Security.Cryptography.Primitives.nuspec",
         "ThirdPartyNotices.txt"
-      ]
-    },
-    "System.Security.Cryptography.RandomNumberGenerator/4.0.0-beta-23019": {
-      "type": "package",
-      "sha512": "EG5695gHeA13DOkGSomxniAg/HqL+jab9Q+krNFYPsgeHk6wQhyEkjTfc2cjqcOZGpyV5k7XKNkhmx9E3vtvrA==",
-      "files": [
-        "lib/DNXCore50/System.Security.Cryptography.RandomNumberGenerator.dll",
-        "lib/net46/System.Security.Cryptography.RandomNumberGenerator.dll",
-        "ref/dotnet/System.Security.Cryptography.RandomNumberGenerator.dll",
-        "ref/net46/System.Security.Cryptography.RandomNumberGenerator.dll",
-        "System.Security.Cryptography.RandomNumberGenerator.4.0.0-beta-23019.nupkg",
-        "System.Security.Cryptography.RandomNumberGenerator.4.0.0-beta-23019.nupkg.sha512",
-        "System.Security.Cryptography.RandomNumberGenerator.nuspec"
       ]
     },
     "System.Security.Cryptography.X509Certificates/4.0.0-beta-23516": {
