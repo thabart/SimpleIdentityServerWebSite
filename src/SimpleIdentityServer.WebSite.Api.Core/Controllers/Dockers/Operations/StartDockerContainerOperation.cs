@@ -14,22 +14,16 @@
 // limitations under the License.
 #endregion
 
-using Docker.DotNet;
-using Docker.DotNet.Models;
-using Docker.DotNet.X509;
 using SimpleIdentityServer.WebSite.Api.Core.Factories;
 using SimpleIdentityServer.WebSite.Api.Core.Validators;
 using System;
-using System.IO;
-using System.Net;
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 
 namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
 {
     public interface IStartDockerContainerOperation
     {
-        void Execute(string name);
+        Task ExecuteAsync(string name);
     }
 
     internal class StartDockerContainerOperation : IStartDockerContainerOperation
@@ -45,13 +39,14 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
             IDockerClientFactory dockerClientFactory)
         {
             _containerValidator = containerValidator;
+            _dockerClientFactory = dockerClientFactory;
         }
 
         #endregion
 
         #region Public methods
 
-        public void Execute(string name)
+        public async Task ExecuteAsync(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -60,25 +55,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
 
             _containerValidator.CheckContainerExist(name);
             var dockerClient = _dockerClientFactory.GetDockerClient();
-            // dockerClient.Containers.
-            /*
-            var assembly = Assembly.GetExecutingAssembly();
-            ServicePointManager.ServerCertificateValidationCallback += (o, c, ch, er) => true;
-            X509Certificate2 x509Certificate;
-            using (var stream = assembly.GetManifestResourceStream("SimpleIdentityServer.WebSite.Api.Core.key.pfx"))
-            {
-                x509Certificate = new X509Certificate2(ReadStream(stream), string.Empty);
-            }
-            var certificateCredentials = new CertificateCredentials(x509Certificate);
-            var configuration = new DockerClientConfiguration(new Uri("https://192.168.99.100:2376"), certificateCredentials);
-            var dockerClient = configuration.CreateClient();
-            var images = dockerClient.Images.ListImagesAsync(new ListImagesParameters
-            {
-                All = true
-            }).Result;
-
-            string s = "";
-            */
+            await dockerClient.Containers.StartContainerAsync(name, null);
         }
 
         #endregion

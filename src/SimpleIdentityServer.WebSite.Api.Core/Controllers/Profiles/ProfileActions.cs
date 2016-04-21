@@ -17,6 +17,7 @@
 using SimpleIdentityServer.WebSite.Api.Core.Models;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles.Actions;
 using SimpleIdentityServer.WebSite.Api.Core.Parameters;
+using System.Threading.Tasks;
 
 namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles
 {
@@ -24,7 +25,9 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles
     {
         Profile GetCurrentProfile(string subject);
 
-        Profile AddProfile(AddProfileParameter addProfileParameter);
+        Task<Profile> AddProfile(
+            AddProfileParameter addProfileParameter,
+            string domainName);
     }
 
     public class ProfileActions : IProfileActions
@@ -52,9 +55,11 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles
             return _getCurrentProfileAction.Execute(subject);
         }
 
-        public Profile AddProfile(AddProfileParameter addProfileParameter)
+        public async Task<Profile> AddProfile(
+            AddProfileParameter addProfileParameter, 
+            string domainName)
         {
-            return _addProfileAction.Execute(addProfileParameter);
+            return await _addProfileAction.ExecuteAsync(addProfileParameter, domainName);
         }
 
         #endregion

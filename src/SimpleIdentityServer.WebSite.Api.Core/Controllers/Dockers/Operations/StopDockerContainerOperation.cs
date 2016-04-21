@@ -14,25 +14,50 @@
 // limitations under the License.
 #endregion
 
+using Docker.DotNet.Models;
+using SimpleIdentityServer.WebSite.Api.Core.Factories;
+using SimpleIdentityServer.WebSite.Api.Core.Validators;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
 {
     public interface IStopDockerContainerOperation
     {
-        void Execute(string containerName);
+        Task ExecuteAsync(string containerName);
     }
 
     internal class StopDockerContainerOperation : IStopDockerContainerOperation
     {
+        private readonly IContainerValidator _containerValidator;
+
+        private readonly IDockerClientFactory _dockerClientFactory;
+
         #region Constructor
 
+        public StopDockerContainerOperation(
+            IContainerValidator containerValidator,
+            IDockerClientFactory dockerClientFactory)
+        {
+            _containerValidator = containerValidator;
+            _dockerClientFactory = dockerClientFactory;
+        }
 
         #endregion
 
         #region Public methods
 
-        public void Execute(string containerName)
+        public async Task ExecuteAsync(string containerName)
         {
+            if (string.IsNullOrWhiteSpace(containerName))
+            {
+                throw new ArgumentNullException(nameof(containerName));
+            }
 
+            _containerValidator.CheckContainerExist(containerName);
+            var dockerClient = _dockerClientFactory.GetDockerClient();
+            await dockerClient.Containers.StopContainerAsync(containerName, new StopContainerParameters(), CancellationToken.None);
         }
 
         #endregion

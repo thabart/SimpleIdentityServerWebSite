@@ -30,6 +30,7 @@ using SimpleIdentityServer.WebSite.Api.Host.Middlewares;
 using SimpleIdentityServer.WebSite.Api.Host.Swagger;
 using SimpleIdentityServer.WebSite.EF;
 using Swashbuckle.SwaggerGen;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
@@ -201,6 +202,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host
                 opt.IsHttpsAuthentication = true;
                 opt.IsCertificateSelfSigned = true;
                 opt.Certificate = CertificateProvider.Get();
+                opt.DockerApiUri = new Uri("https://192.168.99.100:2376");
             });
             services.AddTransient<IEndPointConfiguration, EndPointConfiguration>();
             services.AddSimpleIdentityServerEf(_simpleIdentityServerOptions.ConnectionString);

@@ -25,6 +25,7 @@ using SimpleIdentityServer.WebSite.Api.Host.Extensions;
 using System;
 using System.Net;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
@@ -56,7 +57,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 
         [HttpPost]
         [Authorize]
-        public ProfileResponse PostProfile([FromBody] PostProfileRequest postProfileRequest)
+        public async Task<ProfileResponse> PostProfile([FromBody] PostProfileRequest postProfileRequest)
         {
             if (postProfileRequest == null)
             {
@@ -66,7 +67,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
             var subject = GetSubject();
             var parameter = postProfileRequest.ToParameter();
             parameter.Subject = subject;
-            var profile = _profileActions.AddProfile(parameter);
+            var profile = await _profileActions.AddProfile(parameter, this.GetDomainName());
             if (profile == null)
             {
                 Response.StatusCode = (int)HttpStatusCode.NoContent;

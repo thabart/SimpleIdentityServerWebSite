@@ -15,14 +15,15 @@
 #endregion
 
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations;
+using System.Threading.Tasks;
 
 namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers
 {
     public interface IDockerOperations
     {
-        void StartContainer(string containerName);
+        Task StartContainer(string containerName);
 
-        void StopContainer(string containerName);
+        Task StopContainer(string containerName);
     }
 
     public class DockerOperations : IDockerOperations
@@ -45,14 +46,14 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers
 
         #region Public methods
 
-        public void StartContainer(string containerName)
+        public async Task StartContainer(string containerName)
         {
-            _startDockerContainerOperation.Execute(containerName);
+            await _startDockerContainerOperation.ExecuteAsync(containerName);
         }
 
-        public void StopContainer(string containerName)
+        public async Task StopContainer(string containerName)
         {
-            _stopDockerContainerOperation.Execute(containerName);
+            await _stopDockerContainerOperation.ExecuteAsync(containerName);
         }
 
         #endregion

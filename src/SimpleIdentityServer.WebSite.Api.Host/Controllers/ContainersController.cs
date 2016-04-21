@@ -18,19 +18,21 @@ using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Authorization;
 using System;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations;
+using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers;
+using System.Threading.Tasks;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
 {
     [Route(Constants.RouteValues.Container)]
     public class ContainersController : Controller
     {
-        private readonly IStartDockerContainerOperation _startDockerContainerOperation;
+        private readonly IDockerOperations _dockerOperations;
         
         #region Constructor
 
-        public ContainersController(IStartDockerContainerOperation startDockerContainerOperation)
+        public ContainersController(IDockerOperations dockerOperations)
         {
-            _startDockerContainerOperation = startDockerContainerOperation;
+            _dockerOperations = dockerOperations;
         }
 
         #endregion
@@ -38,10 +40,15 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
         #region Public methods
 
         [HttpGet(Constants.DockerActions.Start)]
-        // [Authorize]
-        public bool GetStart(string name)
+        [Authorize]
+        public async Task<bool> GetStart(string name)
         {
-            _startDockerContainerOperation.Execute("name");
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
+
+            await _dockerOperations.StartContainer(name);
             if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentNullException(nameof(name));
@@ -51,9 +58,15 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Controllers
         }
         
         [HttpGet(Constants.DockerActions.Stop)]
-        // [Authorize]
-        public bool GetStop(string name)
+        [Authorize]
+        public async Task<bool> GetStop(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
+
+            await _dockerOperations.StopContainer(name);
             if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentNullException(nameof(name));
