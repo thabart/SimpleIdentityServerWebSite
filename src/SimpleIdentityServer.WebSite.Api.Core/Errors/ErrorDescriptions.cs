@@ -25,5 +25,11 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Errors
         public const string TheProfileAlreadyExists = "the profile already exists";
 
         public const string TheContainerDoesntExist = "the container {0} doesn't exist";
+
+        public const string TheCertificateIsMissing = "the certificate is missing";
+
+        public const string TheUserCredentialsAreMissing = "the user credentials are missing";
+
+        public const string TheDockerApiUriIsMissing = "the docker API URI is missing";
     }
 }

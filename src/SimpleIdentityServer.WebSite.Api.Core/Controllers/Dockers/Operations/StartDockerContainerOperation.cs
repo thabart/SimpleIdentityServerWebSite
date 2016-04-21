@@ -17,6 +17,7 @@
 using Docker.DotNet;
 using Docker.DotNet.Models;
 using Docker.DotNet.X509;
+using SimpleIdentityServer.WebSite.Api.Core.Factories;
 using SimpleIdentityServer.WebSite.Api.Core.Validators;
 using System;
 using System.IO;
@@ -31,13 +32,17 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
         void Execute(string name);
     }
 
-    internal sealed class StartDockerContainerOperation : IStartDockerContainerOperation
+    internal class StartDockerContainerOperation : IStartDockerContainerOperation
     {
         private readonly IContainerValidator _containerValidator;
 
+        private readonly IDockerClientFactory _dockerClientFactory;
+
         #region Constructor
 
-        public StartDockerContainerOperation(IContainerValidator containerValidator)
+        public StartDockerContainerOperation(
+            IContainerValidator containerValidator,
+            IDockerClientFactory dockerClientFactory)
         {
             _containerValidator = containerValidator;
         }
@@ -53,8 +58,10 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
                 throw new ArgumentNullException(nameof(name));
             }
 
-            // _containerValidator.CheckContainerExist(name);
-
+            _containerValidator.CheckContainerExist(name);
+            var dockerClient = _dockerClientFactory.GetDockerClient();
+            // dockerClient.Containers.
+            /*
             var assembly = Assembly.GetExecutingAssembly();
             ServicePointManager.ServerCertificateValidationCallback += (o, c, ch, er) => true;
             X509Certificate2 x509Certificate;
@@ -71,24 +78,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
             }).Result;
 
             string s = "";
-        }
-
-        #endregion
-
-        #region Private static methods
-        
-        private static byte[] ReadStream(Stream input)
-        {
-            var buffer = new byte[16 * 1024];
-            using (var ms = new MemoryStream())
-            {
-                int read;
-                while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
-                {
-                    ms.Write(buffer, 0, read);
-                }
-                return ms.ToArray();
-            }
+            */
         }
 
         #endregion

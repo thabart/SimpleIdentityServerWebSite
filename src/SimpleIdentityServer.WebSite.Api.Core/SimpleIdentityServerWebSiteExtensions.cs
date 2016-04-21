@@ -15,9 +15,11 @@
 #endregion
 
 using Microsoft.Extensions.DependencyInjection;
+using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Profiles.Actions;
+using SimpleIdentityServer.WebSite.Api.Core.Factories;
 using SimpleIdentityServer.WebSite.Api.Core.Validators;
 using System;
 
@@ -25,20 +27,67 @@ namespace SimpleIdentityServer.WebSite.Api.Core
 {
     public static class SimpleIdentityServerWebSiteExtensions
     {
-        public static IServiceCollection AddSimpleIdentityServerWebSite(this IServiceCollection serviceCollection)
+        #region Public static methods
+
+        public static IServiceCollection AddSimpleIdentityServerWebSite(
+            this IServiceCollection serviceCollection,
+            WebSiteOptions webSiteOptions)
+        {
+            RegisterServices(serviceCollection, webSiteOptions);
+            return serviceCollection;
+        }
+
+        public static IServiceCollection AddSimpleIdentityServerWebSite(
+            this IServiceCollection serviceCollection,
+            Action<WebSiteOptions> callbackOptions)
+        {
+            if (callbackOptions == null)
+            {
+                throw new ArgumentNullException(nameof(callbackOptions));
+            }
+
+            var webSiteOptions = new WebSiteOptions();
+            callbackOptions(webSiteOptions);
+            RegisterServices(serviceCollection, webSiteOptions);
+            return serviceCollection;
+        }
+
+        #endregion
+
+        #region Private static methods
+
+        private static void RegisterServices(
+            IServiceCollection serviceCollection,
+            WebSiteOptions webSiteOptions)
         {
             if (serviceCollection == null)
             {
                 throw new ArgumentNullException(nameof(serviceCollection));
             }
 
+            if (webSiteOptions == null)
+            {
+                throw new ArgumentNullException(nameof(webSiteOptions));
+            }
+
+            // Register operations
             serviceCollection.AddTransient<IProfileActions, ProfileActions>();
             serviceCollection.AddTransient<IGetCurrentProfileAction, GetCurrentProfileAction>();
             serviceCollection.AddTransient<IAddProfileAction, AddProfileAction>();
-            serviceCollection.AddTransient<IContainerValidator, ContainerValidator>();
+            serviceCollection.AddTransient<IDockerOperations, DockerOperations>();
             serviceCollection.AddTransient<IStartDockerContainerOperation, StartDockerContainerOperation>();
+            serviceCollection.AddTransient<IStopDockerContainerOperation, StopDockerContainerOperation>();
 
-            return serviceCollection;
+            // Register validator
+            serviceCollection.AddTransient<IContainerValidator, ContainerValidator>();
+
+            // Register factories
+            serviceCollection.AddTransient<IDockerClientFactory, DockerClientFactory>();
+
+            // Register global options
+            serviceCollection.AddInstance(webSiteOptions);
         }
+
+        #endregion
     }
 }

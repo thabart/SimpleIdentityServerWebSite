@@ -46,10 +46,11 @@
   },
 
   "resource": [
-    "Swagger/index.cshtml"
+    "Swagger/index.cshtml",
+    "key.pfx"
   ],
 
   "frameworks": {
-    "dnx451": {}
+    "dnx451": { }
   }
 }

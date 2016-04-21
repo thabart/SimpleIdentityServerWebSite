@@ -21,5 +21,7 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Errors
         public const string LoginRequiredCode = "login_required";
 
         public const string InvalidRequestCode = "invalid_request";
+
+        public const string InternalError = "internal_error";
     }
 }

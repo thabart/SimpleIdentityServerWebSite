@@ -32,6 +32,7 @@ using SimpleIdentityServer.WebSite.EF;
 using Swashbuckle.SwaggerGen;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SimpleIdentityServer.WebSite.Api.Host
 {
@@ -195,7 +196,12 @@ namespace SimpleIdentityServer.WebSite.Api.Host
 
         private void RegisterDependencies(IServiceCollection services)
         {
-            services.AddSimpleIdentityServerWebSite();
+            services.AddSimpleIdentityServerWebSite(opt =>
+            {
+                opt.IsHttpsAuthentication = true;
+                opt.IsCertificateSelfSigned = true;
+                opt.Certificate = CertificateProvider.Get();
+            });
             services.AddTransient<IEndPointConfiguration, EndPointConfiguration>();
             services.AddSimpleIdentityServerEf(_simpleIdentityServerOptions.ConnectionString);
         }

@@ -9,6 +9,7 @@
   "dependencies": {
     "Docker.DotNet": "1.2.2",
     "Docker.DotNet.X509": "1.2.2",
+    "Docker.DotNet.BasicAuth":  "1.2.2",
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final"
   },
 
@@ -23,9 +24,5 @@
         "System.Runtime": "4.0.0.0"
       }
     }
-  },
-
-  "resource": [
-    "key.pfx"
-  ]
+  }
 }

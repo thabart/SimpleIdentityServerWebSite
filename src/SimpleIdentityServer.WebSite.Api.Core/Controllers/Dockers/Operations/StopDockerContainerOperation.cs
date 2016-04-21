@@ -18,10 +18,23 @@ namespace SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations
 {
     public interface IStopDockerContainerOperation
     {
-
+        void Execute(string containerName);
     }
 
-    public class StopDockerContainerOperation
+    internal class StopDockerContainerOperation : IStopDockerContainerOperation
     {
+        #region Constructor
+
+
+        #endregion
+
+        #region Public methods
+
+        public void Execute(string containerName)
+        {
+
+        }
+
+        #endregion
     }
 }
