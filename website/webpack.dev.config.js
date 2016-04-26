@@ -10,6 +10,7 @@ const metadata = {
     API_URL: API_URL
 };
 
+var path = require('path');
 var currentUrl = "http://" + metadata.host + ":" + metadata.port;
 var commonConfig = require('./webpack.common');
 var webPackMerge = require('webpack-merge');
@@ -27,6 +28,7 @@ module.exports = webPackMerge(commonConfig, {
   ],
   devServer: {
       port: metadata.port,
-      host: metadata.host
+      host: metadata.host,
+      outputPath: path.resolve('./builds')
   }
 });
