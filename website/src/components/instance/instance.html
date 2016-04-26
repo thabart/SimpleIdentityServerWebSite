@@ -7,7 +7,8 @@
     <div class="form-group">
         <label class="control-label col-xs-3">Start / Stop the docker instance</label>
         <div class="col-xs-5">
-            <button class="btn btn-orange" (click)="start()">Start</button>
+            <button class="btn btn-orange" (click)="start()" [hidden]="isStartButtonNotDisplayed">Start</button>
+            <button class="btn btn-orange" (click)="stop()" [hidden]="isStopButtonNotDisplayed">Stop</button>
         </div>
     </div>
     <div class="form-group">

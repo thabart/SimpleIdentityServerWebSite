@@ -11,6 +11,7 @@ import {AppComponent} from './components/app.ts'
 import {SecurityService} from './components/services/security.ts'
 import {ProfileService} from './components/services/profile.ts'
 import {IdentityServerService} from './components/services/identityserver.ts'
+import {ContainerService} from './components/services/container.ts'
 import {Settings} from './components/settings.ts'
 
 export function main()
@@ -22,6 +23,7 @@ export function main()
         SecurityService,
         IdentityServerService,
         ProfileService,
+        ContainerService,
         Settings
     ]);
 }

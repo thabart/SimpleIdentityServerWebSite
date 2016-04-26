@@ -7,7 +7,7 @@ import { SecurityService } from './services/security.ts'
 import { CallBackErrorComponent } from './error/callback-error.ts'
 
 @Component({
-    selector: 'app',    
+    selector: 'app',
     template: require('./app.html'),
     providers: [
         Settings
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
         {
             return hash;
         }
-        
+
         return null;
     }
 }

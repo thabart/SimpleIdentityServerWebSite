@@ -2,6 +2,7 @@ import { Component, OnInit } from 'angular2/core'
 import { Settings } from '../settings.ts'
 
 import { ProfileService, Profile } from '../services/profile.ts'
+import { ContainerService } from '../services/container.ts'
 
 @Component({
     template: require('./instance.html')
@@ -13,10 +14,14 @@ export class InstanceComponent implements OnInit {
     profile: Profile;
     isWaitingNotDisplayed : boolean;
     isLauncherNotDisplayed : boolean;
+    isStartButtonNotDisplayed : boolean;
+    isStopButtonNotDisplayed : boolean;
     constructor(
-        private _profileService : ProfileService)
+        private _profileService : ProfileService,
+        private _containerService : ContainerService)
     { }
     ngOnInit() {
+      this.displayStart();
       this.isLauncherNotDisplayed = true;
       this.isWaitingNotDisplayed = false;
       this.resetError();
@@ -29,7 +34,24 @@ export class InstanceComponent implements OnInit {
           });
     }
     start() {
-      console.log("start instance");
+      var name = this.profile.name;
+      this._containerService.start(name)
+          .then(res => {
+            this.displayStop();
+          })
+          .catch(r => {
+              this.displayError(r.json());
+          });
+    }
+    stop() {
+      var name = this.profile.name;
+      this._containerService.stop(name)
+          .then(res => {
+              this.displayStart();
+          })
+          .catch(r => {
+              this.displayError(r.json());
+          });
     }
     private resetError() {
         this.isErrorNotDisplayed = true;
@@ -52,5 +74,13 @@ export class InstanceComponent implements OnInit {
         {
             this.errorMessage = error.error_description;
         }
+    }
+    private displayStart() {
+      this.isStartButtonNotDisplayed = false;
+      this.isStopButtonNotDisplayed = true;
+    }
+    private displayStop() {
+      this.isStartButtonNotDisplayed = true;
+      this.isStopButtonNotDisplayed = false;
     }
 }

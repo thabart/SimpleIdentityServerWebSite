@@ -16,7 +16,7 @@ export class Profile {
 export class CreateProfileRequest {
     name : string;
 }
-    
+
 @Injectable()
 export class ProfileService {
     private _profilesCurrentPartialPath = "/profiles/current";
@@ -31,7 +31,6 @@ export class ProfileService {
         headers.append('Authorization', 'Bearer ' + accessToken);
         let options = new RequestOptions({ headers : headers });
         let url = this._settings.getApiUrl() + this._profilesCurrentPartialPath;
-        console.log(url);
         return this._http.get(url, options)
             .toPromise()
             .then(res => {
@@ -48,7 +47,7 @@ export class ProfileService {
         return this._http.post(url, json, options)
             .toPromise()
             .then(res => {
-                return <Profile>res.json(); 
+                return <Profile>res.json();
             });
     }
-}    
+}
