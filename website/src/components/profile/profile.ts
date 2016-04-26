@@ -15,7 +15,9 @@ export class ProfileComponent implements OnInit {
     profile: Profile;
     name : string;
     constructor(
-        private _profileService : ProfileService) { }
+        private _profileService : ProfileService) {
+        this.profile = new Profile(); 
+    }
     ngOnInit() {
         this.isWaitingNotDisplayed = false;
         this.resetError();
@@ -36,9 +38,7 @@ export class ProfileComponent implements OnInit {
         request.name = this.name;
         this._profileService.createProfile(request)
             .then(res => {
-                this.isCreateProfileNotDisplayed = true;
-                this.isDisplayProfileInformationNotDisplayed = false;
-                this.profile = res;
+                this.displayProfile(res);
              })
             .catch(r => {
                 this.displayError(r.json());
@@ -55,10 +55,10 @@ export class ProfileComponent implements OnInit {
         this.isDisplayProfileInformationNotDisplayed = false;
         this.profile = profile;
     }
-    private displayError(error) {        
+    private displayError(error) {
         this.isWaitingNotDisplayed = true;
         this.isErrorNotDisplayed = false;
-        this.isCreateProfileNotDisplayed = false; 
+        this.isCreateProfileNotDisplayed = false;
         this.isDisplayProfileInformationNotDisplayed = true;
         if (!error.hasOwnProperty('error_description'))
         {

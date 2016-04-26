@@ -3,33 +3,35 @@
 <div class="alert alert-danger" role="alert" [hidden]="isErrorNotDisplayed">
     <strong>Message</strong> : {{errorMessage}}
 </div>
+<!-- Display profile information -->
 <form class="form-horizontal" [hidden]="isDisplayProfileInformationNotDisplayed">
     <div class="form-group">
         <label class="control-label col-xs-3">Login</label>
         <div class="col-xs-5">
-            <input class="form-control" type="text" readonly="true" value="thabart" />
+            <input class="form-control" type="text" readonly="true" [ngModel]="profile.subject" />
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-3">Authorization endpoint</label>
         <div class="col-xs-5">
-            <input class="form-control" type="text" readonly="true" value="http://localhost:5000/authorization" />
+            <input class="form-control" type="text" readonly="true" [ngModel]="profile.authorization_server" />
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-3">Management API endpoint</label>
         <div class="col-xs-5">
-            <input class="form-control" type="text" readonly="true" value="http://localhost:5000/authorizationmanagement" />
+            <input class="form-control" type="text" readonly="true" [ngModel]="profile.manager_website" />
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-3">Management website</label>
         <div class="col-xs-5">
-            <input class="form-control" type="text" readonly="true" value="http://localhost:5000/authorizationmanagement" />
+            <input class="form-control" type="text" readonly="true" [ngModel]="profile.manager_website_api" />
         </div>
     </div>
 </form>
-<form class="form-horizontal" [hidden]="isCreateProfileNotDisplayed">    
+<!-- Create a profile -->
+<form class="form-horizontal" [hidden]="isCreateProfileNotDisplayed">
     <div class="form-group">
         <label class="control-label col-xs-3">Name</label>
         <div class="col-xs-5">

@@ -1,5 +1,5 @@
 const AUTHORIZATION_URL = 'http://localhost:5002';
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'http://localhost:5001/api';
 const metadata = {
     title: 'Simple Identity Server',
     baseUrl: '/',

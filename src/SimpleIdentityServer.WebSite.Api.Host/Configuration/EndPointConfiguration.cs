@@ -20,23 +20,32 @@ namespace SimpleIdentityServer.WebSite.Api.Host.Configuration
 {
     public class EndPointConfiguration : IEndPointConfiguration
     {
-        private const string Url = "http://{0}.localhost";
+        private readonly string _url;
+
+        #region Constructor
+
+        public EndPointConfiguration(string url)
+        {
+            _url = url;
+        }
+
+        #endregion
 
         #region Public methods
 
         public string GetAuthorizationServer(string name)
         {
-            return string.Format(Url, name) + "/authorization";
+            return string.Format(_url, name) + "/authorization";
         }
 
         public string GetManagerWebSite(string name)
         {
-            return string.Format(Url, name);
+            return string.Format(_url, name);
         }
 
         public string GetManagerWebSiteApi(string name)
         {
-            return string.Format(Url, name) + "/managerapi";
+            return string.Format(_url, name) + "/managerapi";
         }
 
         #endregion

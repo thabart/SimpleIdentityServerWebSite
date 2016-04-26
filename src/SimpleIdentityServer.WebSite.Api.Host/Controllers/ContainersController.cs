@@ -14,11 +14,10 @@
 // limitations under the License.
 #endregion
 
-using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Authorization;
-using System;
-using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers.Operations;
+using Microsoft.AspNet.Mvc;
 using SimpleIdentityServer.WebSite.Api.Core.Controllers.Dockers;
+using System;
 using System.Threading.Tasks;
 
 namespace SimpleIdentityServer.WebSite.Api.Host.Controllers

@@ -18,3 +18,9 @@ ul.id-server a.router-link-active {
 ul.id-server > li > a {
     padding: 10px 15px;
 }
+
+ul.id-server li,
+ul.id-server li > a
+{
+  width:100%;
+}

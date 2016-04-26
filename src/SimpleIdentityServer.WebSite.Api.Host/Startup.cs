@@ -26,6 +26,7 @@ using SimpleIdentityServer.UserInformation.Authentication;
 using SimpleIdentityServer.WebSite.Api.Core;
 using SimpleIdentityServer.WebSite.Api.Core.Configuration;
 using SimpleIdentityServer.WebSite.Api.Host.Configuration;
+using SimpleIdentityServer.WebSite.Api.Host.Factories;
 using SimpleIdentityServer.WebSite.Api.Host.Middlewares;
 using SimpleIdentityServer.WebSite.Api.Host.Swagger;
 using SimpleIdentityServer.WebSite.EF;
@@ -33,7 +34,6 @@ using Swashbuckle.SwaggerGen;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
 
 namespace SimpleIdentityServer.WebSite.Api.Host
 {
@@ -60,17 +60,6 @@ namespace SimpleIdentityServer.WebSite.Api.Host
             }
         }
 
-        private class SimpleIdentityServerOptions
-        {
-            public string UserInformationUrl { get; set; }
-
-            public string AuthorizationUrl { get; set; }
-
-            public string TokenUrl { get; set; }
-
-            public string ConnectionString { get; set; }
-        }
-
         private SimpleIdentityServerOptions _simpleIdentityServerOptions;
 
         #region Properties
@@ -90,7 +79,7 @@ namespace SimpleIdentityServer.WebSite.Api.Host
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
-            InitializeOptions();
+            _simpleIdentityServerOptions = ConfigurationFactory.GetConfiguration(Configuration);
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -184,17 +173,6 @@ namespace SimpleIdentityServer.WebSite.Api.Host
 
         #region Private methods
 
-        private void InitializeOptions()
-        {
-            _simpleIdentityServerOptions = new SimpleIdentityServerOptions
-            {
-                AuthorizationUrl = Configuration["AuthorizationUrl"],
-                UserInformationUrl = Configuration["UserInfoUrl"],
-                TokenUrl = Configuration["TokenUrl"],
-                ConnectionString = Configuration["Data:DefaultConnection:ConnectionString"]
-            };
-        }
-
         private void RegisterDependencies(IServiceCollection services)
         {
             services.AddSimpleIdentityServerWebSite(opt =>
@@ -202,9 +180,10 @@ namespace SimpleIdentityServer.WebSite.Api.Host
                 opt.IsHttpsAuthentication = true;
                 opt.IsCertificateSelfSigned = true;
                 opt.Certificate = CertificateProvider.Get();
-                opt.DockerApiUri = new Uri("https://192.168.99.100:2376");
+                opt.DockerApiUri = new Uri(_simpleIdentityServerOptions.DockerApiUrl);
             });
-            services.AddTransient<IEndPointConfiguration, EndPointConfiguration>();
+            var endPointConfiguration = new EndPointConfiguration(_simpleIdentityServerOptions.InstancePatternUrl);
+            services.AddInstance<IEndPointConfiguration>(endPointConfiguration);
             services.AddSimpleIdentityServerEf(_simpleIdentityServerOptions.ConnectionString);
         }
 
